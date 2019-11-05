@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ashishsingh/Desktop/myApp/travelapp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v25/values-v25.xml",
+            "outputFile": "C:\\Users\\TCTSIT\\Desktop\\app\\5112019\\travelApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v25\\values-v25.xml",
             "map": [
                 {
-                    "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2be0e51fe68fa81d1b602ce91e77e683/res/values-v25/values-v25.xml",
+                    "source": "C:\\Users\\TCTSIT\\.gradle\\caches\\transforms-2\\files-2.1\\b113dc4f9bc8a52bef26821f0f42c3cd\\res\\values-v25\\values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

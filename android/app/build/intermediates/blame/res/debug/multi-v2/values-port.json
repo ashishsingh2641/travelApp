@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ashishsingh/Desktop/myApp/travelapp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "outputFile": "C:\\Users\\TCTSIT\\Desktop\\app\\5112019\\travelApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2be0e51fe68fa81d1b602ce91e77e683/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\TCTSIT\\.gradle\\caches\\transforms-2\\files-2.1\\b113dc4f9bc8a52bef26821f0f42c3cd\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
