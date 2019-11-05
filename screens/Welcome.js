@@ -7,9 +7,11 @@ import {
   ScrollView,
   StatusBar,
   Alert,
-  Linking
+  Linking,
+  TouchableOpacity
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import PageLoader from './PageLoader';
 
 class Welcome extends React.Component {
     constructor(props) {
@@ -18,14 +20,21 @@ class Welcome extends React.Component {
             isFetching: false,
          }
     }
-    onRefresh() {
-        this.setState({ isFetching: true });
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({ isFetching: true });
+        }, 4000)
      }
     render() {
         return (
         <>
         <StatusBar barStyle="light-content" backgroundColor="#186057" />
         <ScrollView>
+            {this.state.isFetching === false ? 
+                <View style={{marginTop: 100}}>
+                    <PageLoader />
+                </View>
+            :
             <View style={styles.container} 
             >
                 <View style={styles.contentContainer}>
@@ -58,12 +67,12 @@ class Welcome extends React.Component {
                         colors={['#57C7B8', '#186057']} 
                         style={styles.linearGradient} 
                         >
-                        <Text style={styles.buttonText}
-                        onPress={() => 
-                            this.props.navigation.navigate('Login')
-                            }>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+                        <Text style={styles.buttonText}>
                             Login
                         </Text>
+                        </TouchableOpacity>
+                        
                         </LinearGradient>
                 </View>
                 <View style={styles.signup}>
@@ -79,6 +88,7 @@ class Welcome extends React.Component {
                 </Text>
                 </View>
             </View>
+            }
             </ScrollView>
         </>
         )
