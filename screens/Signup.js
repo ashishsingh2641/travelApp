@@ -124,14 +124,11 @@ class Signup extends Component {
                                 start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
                                 colors={['#57C7B8', '#186057']}
                                 style={styles.linearGradient}>
-                                <Text style={styles.buttonText}>
+                                <Text style={styles.buttonText}
+                                onPress={() => this.props.navigation.navigate('Login')}>
                                     Signup
                                 </Text>
                             </LinearGradient>
-                        </View>
-                        <View style={styles.signup}>
-                            <Text onPress={() => {this.props.navigation.navigate('Login')}}
-                                style={styles.text}>Login</Text>
                         </View>
                     </View>
                 </ScrollView>
