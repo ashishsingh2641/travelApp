@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {StyleSheet, View, Text, TextInput, Alert, ScrollView} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
+import HeaderComponent from '../components/HeaderComponent';
 
 class Signup extends Component {
     constructor(props) {
@@ -79,6 +80,10 @@ class Signup extends Component {
         return (
             <>
                 <ScrollView>
+                <HeaderComponent 
+                 icon={require('../assets/Doner.png')}
+                    avatar={require('../assets/icon.png')}
+                    onNavigate={() => this.props.navigation.openDrawer()}/>
                     <View style={styles.container}>
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>

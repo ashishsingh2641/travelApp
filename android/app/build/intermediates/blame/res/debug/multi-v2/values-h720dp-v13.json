@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\TCTSIT\\Desktop\\app\\5112019\\travelApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
+            "outputFile": "/Users/ashishsingh/Desktop/travelApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TCTSIT\\.gradle\\caches\\transforms-2\\files-2.1\\b113dc4f9bc8a52bef26821f0f42c3cd\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/values-h720dp-v13/values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

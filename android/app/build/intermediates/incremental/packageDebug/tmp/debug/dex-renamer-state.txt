@@ -1,4 +1,4 @@
-#Wed Nov 06 11:54:40 IST 2019
-base.0=C\:\\Users\\TCTSIT\\Desktop\\app\\5112019\\travelApp\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed Nov 06 20:09:05 IST 2019
+base.0=/Users/ashishsingh/Desktop/travelApp/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

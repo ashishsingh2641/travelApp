@@ -9,63 +9,19 @@ import Explore from '../screens/Explore';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const AppDrawNavigator = createDrawerNavigator(
-    {
-        Login: {
-            screen: Login,
-           
-        },
-        Signup: {
-            screen: Signup,
-            
-        }
-    }
-);
-const AppNavigator = createStackNavigator(
-    { 
-        Welcome: {
-            screen: Welcome,
-            navigationOptions: {
-                header: null
-            }
-        },
-        AppDrawNavigator: {
-            screen: AppDrawNavigator,
-        },
-
-        Explore: {
-            screen: Explore,
-            navigationOptions: {
-                header: null
-            }
-        },
-    },{
-        defaultNavigationOptions: ({navigation}) => {
-            return {
-                headerStyle: {
-                    backgroundColor: '#186057',
-                    
-                },
-                headerLeft: (
-                    <Icons style={{paddingLeft: 10, color: 'white'}} 
-                        onPress={() => navigation.openDrawer()}    
-                    name="menu" size={30} />
-                )
-            }
-        }
+const AppDrawerNavigation = createDrawerNavigator({
+    Welcome: {
+        screen: Welcome
     },
-    {
-        initialRouteName: 'Welcome',
+    Login: {
+        screen: Login
+    },
+    Signup: {
+        screen: Signup
+    },
+    Explore: {
+        screen: Explore
     }
-)
-// const screens = createSwitchNavigator(
-//     {
-       
-//         Explore: {
-//             screen: AppNavigator,
-//         }
-//     }, 
-// );
+})
 
-
-export default createAppContainer(AppNavigator);
+export default createAppContainer(AppDrawerNavigation);

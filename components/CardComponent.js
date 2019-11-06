@@ -1,25 +1,24 @@
 import React, {Component} from 'react';
-import {ImageBackground} from'react-native';
-import { Container, Card, CardItem, Text, Body } from 'native-base';
+import {View, Text, ScrollView, Image} from 'react-native';
 
 class CardComponent extends Component {
     render () {
         return (
-            <Container>
-             {this.props.CardType !== 'overlay' ? 
-               <Card style={{height: 200,}}>
-               <ImageBackground source={require('../assets/pexels-photo-2785523.jpeg')} 
-               style={{flex: 1, width: '100%', height: '100%', position: 'relative', justifyContent: "center", alignItems: 'center'}}>
-                   <Text style={{position: 'absolute', top:0, left:0, right: 0, bottom: 0, backgroundColor: 'black', opacity: .3}} />
- 
-                   <Text style={{color: "white", fontSize: 30}}>Inside</Text>
-               </ImageBackground>
-               </Card>
-               : <Text>Not a card.............</Text> 
-            }
-          </Container>
+            <>
+            <View style={{width: 130, height: 130, marginLeft: 20, borderWidth: 0.5, borderColor: '#dddddd', elevation:1}}>
+                <View style={{flex: 2}}>
+                    <Image source={require('../assets/man.jpg')} 
+                        style={{flex: 1, width: null, height: null, resizeMode: 'cover'}} />
+                </View>
+                <View style={{flex: 1, paddingLeft: 10, paddingTop: 10}}>
+                    <Text>Home</Text>
+                </View>
+            </View>
+        </>
         )
     }
 }
+
+
 
 export default CardComponent;

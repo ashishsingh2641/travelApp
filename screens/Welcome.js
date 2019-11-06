@@ -8,28 +8,49 @@ import {
   StatusBar,
   Alert,
   Linking,
-  TouchableOpacity
+  TouchableOpacity,
+  RefreshControl,
+  SafeAreaView
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PageLoader from './PageLoader';
+import { Header } from 'react-navigation-stack';
+import HeaderComponent from '../components/HeaderComponent';
 
 class Welcome extends React.Component {
     constructor(props) {
         super(props); 
         this.state = { 
             isFetching: false,
-         }
+            refreshing: false
+        }
     }
     componentDidMount() {
         setTimeout(() => {
             this.setState({ isFetching: true });
         }, 4000)
-     }
+    }
+    _onRefresh = () => {
+        this.setState({
+            refreshing: true,
+            isFetching: false
+        });
+        setTimeout(() => {
+            this.setState({refreshing: false, isFetching: true});
+        }, 3000)
+      }
     render() {
         return (
         <>
+        <SafeAreaView style={{flex: 1}}>
         <StatusBar barStyle="light-content" backgroundColor="#186057" />
-        <ScrollView>
+        <ScrollView
+        refreshControl={
+            <RefreshControl
+              refreshing={this.state.refreshing}
+              onRefresh={this._onRefresh}
+            />
+          }>
             {this.state.isFetching === false ? 
                 <View style={{marginTop: 100}}>
                     <PageLoader />
@@ -90,6 +111,7 @@ class Welcome extends React.Component {
             </View>
             }
             </ScrollView>
+            </SafeAreaView>
         </>
         )
     }
