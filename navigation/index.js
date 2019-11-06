@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image, TouchableOpacity,Alert} from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator  } from 'react-navigation-stack';
 import Welcome from '../screens/Welcome';
@@ -12,15 +13,26 @@ const AppDrawNavigator = createDrawerNavigator(
     {
         Login: {
             screen: Login,
+           
         },
         Signup: {
             screen: Signup,
+            
         }
     }
 );
 const AppNavigator = createStackNavigator(
-    {
-        AppDrawNavigator,
+    { 
+        Welcome: {
+            screen: Welcome,
+            navigationOptions: {
+                header: null
+            }
+        },
+        AppDrawNavigator: {
+            screen: AppDrawNavigator,
+        },
+
         Explore: {
             screen: Explore,
             navigationOptions: {
@@ -30,27 +42,30 @@ const AppNavigator = createStackNavigator(
     },{
         defaultNavigationOptions: ({navigation}) => {
             return {
+                headerStyle: {
+                    backgroundColor: '#186057',
+                    
+                },
                 headerLeft: (
-                    <Icons style={{paddingLeft: 10}} 
+                    <Icons style={{paddingLeft: 10, color: 'white'}} 
                         onPress={() => navigation.openDrawer()}    
                     name="menu" size={30} />
                 )
             }
         }
-    }
-)
-const screens = createSwitchNavigator(
+    },
     {
-        Welcome: {
-            screen: Welcome
-        },
-        Explore: {
-            screen: AppNavigator,
-        }
-    }, {
         initialRouteName: 'Welcome',
     }
-);
+)
+// const screens = createSwitchNavigator(
+//     {
+       
+//         Explore: {
+//             screen: AppNavigator,
+//         }
+//     }, 
+// );
 
 
-export default createAppContainer(screens);
+export default createAppContainer(AppNavigator);

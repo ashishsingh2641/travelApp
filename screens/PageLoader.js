@@ -11,9 +11,8 @@ const PageLoader = () => {
       return (
         <Placeholder
         Animation={Fade}
-        Left={PlaceholderMedia}
       >
-        <PlaceholderLine width={80} />
+        <PlaceholderLine width={100} height={100} />
         <PlaceholderLine />
         <PlaceholderLine width={30} />
         <PlaceholderLine width={60} />
