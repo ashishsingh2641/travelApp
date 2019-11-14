@@ -6,6 +6,7 @@ import FormInput from '../components/FormInput';
 import Button from '../components/Button';
 import { Formik } from 'formik';
 import * as yup from 'yup';
+import axios from 'axios';
 
 const validationSchema = yup.object().shape({
     email: yup
@@ -22,6 +23,16 @@ const validationSchema = yup.object().shape({
 });
 
 class Login extends Component {
+    componentDidMount() {
+        axios.get('https://localhost:5000/api')
+        .then(function (response) {
+            // handle success
+            console.log(response);
+          }).catch(function (error) {
+            // handle error
+            console.log(error);
+          })
+    }
     render() {
         return (
             <>
@@ -41,42 +52,8 @@ class Login extends Component {
                             <Formik
                                 initialValues={{ email: '', password: '' }}
                                 onSubmit={(values, actions) => {
-                                    console.log(values)
-                                    
-                                    fetch('/test', {
-                                        method: 'POST',
-                                        headers: {
-                                            'Accept': 'application/json, text/plain, */*',
-                                            'Content-Type': 'application/json'
-                                        },
-                                        body: JSON.stringify({
-                                            email: values.email,
-                                            password: values.password
-                                        }) 
-                                       
-                                    })
-                                    .then((response) => {
-                                        actions.setSubmitting(true);
-                                        response.json()
-                                    })
-                                    .then(function (result) {
-                                        
-                                        setTimeout(() => {
-                                            actions.setSubmitting(false);
-                                         }, 1000);
-                                    })
-                                    .catch (function (error) {
-                                       
-                                        setTimeout(() => {
-                                          actions.setSubmitting(true);
-                                          if (values.isSubmitting === true) {
-                                              debugger;
-                                              actions.setSubmitting(false);
-                                              this.props.navigation.navigate("Explore")
-                                          }
-                                        }, 100);
-                                    });
-                                    
+                                    console.log(values);
+                                   
                                 }}
                                 validationSchema={validationSchema}>
                                 {formikProps => (
@@ -172,4 +149,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Login;
+export default Login;
