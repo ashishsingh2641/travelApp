@@ -23,15 +23,11 @@ const validationSchema = yup.object().shape({
 });
 
 class Login extends Component {
-    componentDidMount() {
-        axios.get('https://localhost:5000/api')
-        .then(function (response) {
-            // handle success
-            console.log(response);
-          }).catch(function (error) {
-            // handle error
-            console.log(error);
-          })
+    constructor(props){
+        super(props);
+        this.state = {
+            loginMessage: ''
+        }
     }
     render() {
         return (
@@ -52,8 +48,14 @@ class Login extends Component {
                             <Formik
                                 initialValues={{ email: '', password: '' }}
                                 onSubmit={(values, actions) => {
-                                    console.log(values);
-                                   
+                                   // console.log(values);
+                                        debugger;
+                                        actions.setSubmitting(true);
+                                        setTimeout(() => {
+                                            alert(JSON.stringify(values));
+                                            actions.setSubmitting(false);
+                                            this.props.navigation.navigate("Explore");
+                                          }, 1000);
                                 }}
                                 validationSchema={validationSchema}>
                                 {formikProps => (
