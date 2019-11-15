@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Alert, ScrollView, Linking,ActivityIndicator } from 'react-native';
-import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { StyleSheet, View, Text, ScrollView,ActivityIndicator } from 'react-native';
+import SocialShare from '../components/SocialShare';
 import HeaderComponent from '../components/HeaderComponent';
 import FormInput from '../components/FormInput';
 import Button from '../components/Button';
@@ -26,10 +26,11 @@ class Login extends Component {
     constructor(props){
         super(props);
         this.state = {
-            loginMessage: ''
+            loginMessage: '',
         }
     }
     render() {
+       
         return (
             <>
                 <ScrollView>
@@ -43,19 +44,34 @@ class Login extends Component {
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>
                                 <Text style={styles.ColoredText}> Login.
+                                <Text>
+                                    {this.state.loginMessage}
+                                </Text>
                                 </Text>
                             </View>
                             <Formik
                                 initialValues={{ email: '', password: '' }}
                                 onSubmit={(values, actions) => {
-                                   // console.log(values);
-                                        debugger;
-                                        actions.setSubmitting(true);
-                                        setTimeout(() => {
-                                            alert(JSON.stringify(values));
-                                            actions.setSubmitting(false);
-                                            this.props.navigation.navigate("Explore");
-                                          }, 1000);
+                                        //alert(JSON.stringify(values));
+                                        fetch('http://172.16.163.172:5001/api/v1/login') // Call the fetch function passing the url of the API as a parameter
+                                        .then((resp) =>  {
+                                            resp.json()
+                                        }) // Transform the data into json
+                                        .then((data) => {
+                                           
+                                            if (data === undefined) {
+                                                actions.isSubmitting(false);
+                                                    this.props.navigation.navigate("Explore");
+                                                //console.log(JSON.stringify(data))
+                                            } else {
+                                                actions.setSubmitting(true);
+                                            }
+                                            
+                                          })
+                                        .catch(function(error) {
+                                            console.log(":::::::::::::::::::hi:::::::::::::")
+                                        console.log(error)
+                                        });
                                 }}
                                 validationSchema={validationSchema}>
                                 {formikProps => (
@@ -87,7 +103,10 @@ class Login extends Component {
                                         {formikProps.isSubmitting ? (
                                          <ActivityIndicator />
                                          ) : (
-                                            <Button label="Login" buttonAction={formikProps.handleSubmit} />
+                                            <Button buttonAction={() => {
+                                                formikProps.handleSubmit();
+                                               
+                                            }} label="login" />
                                          )}
                                     </React.Fragment>
                                 )}
@@ -99,20 +118,7 @@ class Login extends Component {
                                 opacity: .6,
                                 color: '#186057'
                             }}>or login with</Text>
-                            <View style={{ display: 'flex', flexDirection: 'row' }}>
-                                <Text style={styles.facebook}
-                                    onPress={() => Linking.openURL('http://www.facebook.com')} >
-                                    <Icons name="facebook" size={32} />
-                                </Text>
-                                <Text style={styles.facebook}
-                                    onPress={() => Linking.openURL('http://twitter.com')}>
-                                    <Icons name="twitter" size={32} />
-                                </Text>
-                                <Text style={styles.facebook}
-                                    onPress={() => Linking.openURL('http://google.com')}>
-                                    <Icons name="google" size={32} />
-                                </Text>
-                            </View>
+                            <SocialShare />
                         </View>
                     </View>
                 </ScrollView>
@@ -144,11 +150,7 @@ const styles = StyleSheet.create({
         marginTop: 50,
         alignItems: 'center',
     },
-    facebook: {
-        marginTop: 10,
-        opacity: .3,
-        color: '#186057'
-    }
+    
 });
 
 export default Login;
