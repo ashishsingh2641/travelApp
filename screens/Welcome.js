@@ -14,8 +14,8 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PageLoader from './PageLoader';
-import { Header } from 'react-navigation-stack';
 import HeaderComponent from '../components/HeaderComponent';
+import { whileStatement } from '@babel/types';
 
 class Welcome extends React.Component {
     constructor(props) {
@@ -78,35 +78,32 @@ class Welcome extends React.Component {
                             marginBottom: 30
                             }} />
                     </View>
-                        {/* <Button
-                            title="Press me"
-                            color="teal"
-                            onPress={() => Alert.alert('Button with adjusted color pressed')}
-                        /> */}
                         <LinearGradient 
                         start={{x: 0, y: 0}} end={{x: 1, y: 0}}
                         colors={['#57C7B8', '#186057']} 
                         style={styles.linearGradient} 
                         >
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Login')}>
+                        <TouchableOpacity 
+                        onPress={() => this.props.navigation.navigate('Explore')}>
                         <Text style={styles.buttonText}>
-                            Login
+                            Search for Hotels
                         </Text>
                         </TouchableOpacity>
                         
                         </LinearGradient>
-                </View>
-                <View style={styles.signup}>
-                    <Text onPress={() => {
-                     this.props.navigation.navigate('Signup')
-                    }}
-                    style={styles.text}>Signup</Text>
-                </View>
-                <View style={styles.terms}>
-                <Text style={styles.termsText}
-                    onPress={() => Linking.openURL('http://google.com')}>
-                    Terms of services
-                </Text>
+                        <LinearGradient 
+                        start={{x: 0, y: 0}} end={{x: 1, y: 0}}
+                        colors={['#57C7B8', '#186057']} 
+                        style={styles.linearGradient} 
+                        >
+                        <TouchableOpacity 
+                        onPress={() => this.props.navigation.navigate('Signup')}>
+                        <Text style={styles.buttonText}>
+                            Register your hotel
+                        </Text>
+                        </TouchableOpacity>
+                        
+                        </LinearGradient>
                 </View>
             </View>
             }

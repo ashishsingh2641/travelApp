@@ -33,13 +33,28 @@ class Explore extends Component {
                         <CardComponent />
                     </ScrollView>
             </View>
-                <View style={{flex: 1, height: '100%', marginBottom: 100}}>
+                <View style={{flex: 1, height: '100%', marginBottom: 150}}>
+                    <Recmonded imagrUri={require('../assets/man.jpg')}
+                    HandleRoute={() => {this.props.navigation.navigate("Signup")}}/>
+                    <Recmonded HandleRoute={() => {this.props.navigation.navigate("Signup")}}
+                    imagrUri={require('../assets/pexels-photo-2785523.jpeg')}/>
+                    <Recmonded imagrUri={require('../assets/pexels-photo-2785523.jpeg')}/>
                     <Recmonded imagrUri={require('../assets/man.jpg')}/>
                     <Recmonded imagrUri={require('../assets/pexels-photo-2785523.jpeg')}/>
-                    <Recmonded imagrUri={require('../assets/pexels-photo-2785523.jpeg')}/>
-                
                 </View>
            </ScrollView>
+           <View 
+            style={{
+                    flex: 1,
+                    justifyContent: 'flex-end',
+                    position: 'relative',
+                    marginTop: 40
+                }}>
+                <Text onPress={() => this.props.navigation.navigate("Login")} 
+                style={{position: 'absolute', right: 10, textAlign: 'center', elevation: 5,
+                    width: 50, height: 50, bottom: 150, zIndex: 999, borderRadius: 50,
+                    fontSize: 35, backgroundColor: '#186057', color: 'white'}}>+</Text>
+            </View>
       </View>
     );
   }

@@ -9,6 +9,8 @@ import * as yup from 'yup';
 import axios from 'axios';
 
 const validationSchema = yup.object().shape({
+    firstName: yup
+    .string().label('firstName').required(),
     email: yup
         .string()
         .label('Email')
@@ -27,10 +29,10 @@ class Login extends Component {
         super(props);
         this.state = {
             loginMessage: '',
+            isLoading: false
         }
     }
     render() {
-       
         return (
             <>
                 <ScrollView>
@@ -52,22 +54,19 @@ class Login extends Component {
                             <Formik
                                 initialValues={{ email: '', password: '' }}
                                 onSubmit={(values, actions) => {
+                                        this.setState({
+                                            isLoading: true
+                                        })
                                         //alert(JSON.stringify(values));
-                                        fetch('http://172.16.163.172:5001/api/v1/login') // Call the fetch function passing the url of the API as a parameter
-                                        .then((resp) =>  {
-                                            resp.json()
-                                        }) // Transform the data into json
-                                        .then((data) => {
-                                           
-                                            if (data === undefined) {
-                                                actions.isSubmitting(false);
-                                                    this.props.navigation.navigate("Explore");
-                                                //console.log(JSON.stringify(data))
-                                            } else {
-                                                actions.setSubmitting(true);
+                                        axios.get('http://192.168.0.107:5001/api/v1/login') // Call the fetch function passing the url of the API as a parameter
+                                        .then((res) => {
+                                            if (res !== undefined) {
+                                                this.setState({
+                                                    isLoading: false
+                                                })
                                             }
-                                            
-                                          })
+                                            this.props.navigation.navigate("Explore");
+                                        })
                                         .catch(function(error) {
                                             console.log(":::::::::::::::::::hi:::::::::::::")
                                         console.log(error)
@@ -100,7 +99,7 @@ class Login extends Component {
                                             value={formikProps.values.password} required={true} 
                                             validateText={formikProps.touched.password && formikProps.errors.password}
                                             />
-                                        {formikProps.isSubmitting ? (
+                                        {this.state.isLoading === true ? (
                                          <ActivityIndicator />
                                          ) : (
                                             <Button buttonAction={() => {

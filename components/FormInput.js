@@ -11,6 +11,7 @@ const FormInput = (props) => {
             <Text style={{ marginTop: 10, marginBottom: 10 }}>{formFieldLabel}
             {required === true ? <Text style={{color: 'red'}}>*</Text> : <Text /> }</Text>
             <TextInput
+                multipleLine={props.multipleLine}
                 secureTextEntry={props.secureTextEntry}
                 onTouchStart={handleTouchStart}
                 style={style} autoFocus={autoFocus}
@@ -21,7 +22,7 @@ const FormInput = (props) => {
                 required={required}
             />
             {formFieldLabel === 'password' || formFieldLabel === "Password" ? 
-             <Icons name="eye-outline" size={28} style={styles.positionIcon2}
+             <Icons name={props.icons || "eye-outline"} size={28} style={styles.positionIcon2}
                 onPress={props.toggleIcon} />
             : <Text style={{height: 0}}/> }
             <Text style={{ color: 'red',marginTop: 10 }}>

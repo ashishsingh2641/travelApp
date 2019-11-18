@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\TCTSIT\\Desktop\\app\\5112019\\travelApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "outputFile": "/Users/ashishsingh/Desktop/app/travelApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TCTSIT\\.gradle\\caches\\transforms-2\\files-2.1\\9ca40e431e44b582b0edf60ae55b937d\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
