@@ -15,7 +15,6 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import PageLoader from './PageLoader';
 import HeaderComponent from '../components/HeaderComponent';
-import { whileStatement } from '@babel/types';
 
 class Welcome extends React.Component {
     constructor(props) {
@@ -91,19 +90,18 @@ class Welcome extends React.Component {
                         </TouchableOpacity>
                         
                         </LinearGradient>
-                        <LinearGradient 
+                    <LinearGradient 
                         start={{x: 0, y: 0}} end={{x: 1, y: 0}}
                         colors={['#57C7B8', '#186057']} 
                         style={styles.linearGradient} 
                         >
                         <TouchableOpacity 
-                        onPress={() => this.props.navigation.navigate('Signup')}>
+                        onPress={() => this.props.navigation.navigate('SprSignUp')}>
                         <Text style={styles.buttonText}>
                             Register your hotel
                         </Text>
                         </TouchableOpacity>
-                        
-                        </LinearGradient>
+                    </LinearGradient>
                 </View>
             </View>
             }

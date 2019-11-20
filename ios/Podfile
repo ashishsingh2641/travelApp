@@ -44,6 +44,8 @@ target 'travelapp' do
 
   pod 'RNScreens', :path => '../node_modules/react-native-screens'
 
+  pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
   target 'travelappTests' do
     inherit! :search_paths
     # Pods for testing
