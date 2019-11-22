@@ -19,8 +19,7 @@ class SprSignUp extends Component {
             icons: 'eye-off-outline',
             count: 0,
             secureTextEntry: true,
-            photo: null,
-           
+            photo: null
         }
     }
     handleChoosePhoto = () => {
@@ -59,22 +58,15 @@ class SprSignUp extends Component {
     }
     render() {
         const {photo} = this.state;
+        const receivedValue = this.props.navigation.getParam('role');
+        //alert(receivedValue);
         return (
             <>
                 <ScrollView>
-                    <HeaderComponent
-                        icon={require('../assets/Doner.png')}
-                        avatar={require('../assets/icon.png')}
-                        onNavigate={() => {
-                            this.props.navigation.openDrawer()
-                        }} />
                     <View style={styles.container}>
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>
-                                <Text style={styles.ColoredText}> Hotel Registration Sign Up.
-                                <Text>
-                                    {this.state.loginMessage}
-                                </Text>
+                                <Text style={styles.ColoredText}> {receivedValue +  ' Sign Up'}
                                 </Text>
                             </View>
                             <Formik
@@ -139,7 +131,7 @@ class SprSignUp extends Component {
                                             editable={true}
                                             value={'Hotel_' + this.uuidv4()} />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.name && formikProps.errors.name ? 'red' : 'grey' }}
                                             formFieldLabel="Name"
                                             placeHolderText="Jhon Doe"
@@ -151,7 +143,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.name && formikProps.errors.name}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1,  fontSize: 20,
                                             borderColor: formikProps.touched.email && formikProps.errors.email ? 'red' : 'grey' }}
                                             formFieldLabel="Email"
                                             placeHolderText="mikysingh1986@gmail.com"
@@ -164,7 +156,7 @@ class SprSignUp extends Component {
                                             />
 
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1,  fontSize: 20,
                                             borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'grey' }}
                                             formFieldLabel="Password"
                                             secureTextEntry={this.state.secureTextEntry}
@@ -183,7 +175,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.password && formikProps.errors.password}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1,  fontSize: 20,
                                             borderColor: formikProps.touched.phoneNumber && formikProps.errors.poneNumber ? 'red' : 'grey' }}
                                             formFieldLabel="Phone"
                                             onBlur={formikProps.handleBlur('phoneNumber')}
@@ -193,7 +185,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.phoneNumber && formikProps.errors.phoneNumber}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.AddressLine1 && formikProps.errors.AddressLine1 ? 'red' : 'grey' }}
                                             formFieldLabel="AddressLine1"
                                             onBlur={formikProps.handleBlur('AddressLine1')}
@@ -203,7 +195,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.AddressLine1 && formikProps.errors.AddressLine1}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.AddressLine2 && formikProps.errors.AddressLine2 ? 'red' : 'grey' }}
                                             formFieldLabel="AddressLine2"
                                             onBlur={formikProps.handleBlur('AddressLine2')}
@@ -213,7 +205,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.AddressLine2 && formikProps.errors.AddressLine2}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.City && formikProps.errors.City ? 'red' : 'grey' }}
                                             formFieldLabel="City"
                                             onBlur={formikProps.handleBlur('City')}
@@ -223,7 +215,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.City && formikProps.errors.City}
                                         />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.pincode && formikProps.errors.pincode ? 'red' : 'grey' }}
                                             formFieldLabel="Pincode"
                                             onBlur={formikProps.handleBlur('pincode')}
@@ -233,7 +225,7 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.pincode && formikProps.errors.pincode}
                                         />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
+                                            style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.State && formikProps.errors.State ? 'red' : 'grey' }}
                                             formFieldLabel="State"
                                             onBlur={formikProps.handleBlur('State')}
@@ -302,7 +294,7 @@ const styles = StyleSheet.create({
 
     ColoredText: {
         fontSize: 30,
-        color: '#186057',
+        color: '#2c3e50',
         fontWeight: 'bold',
         fontFamily: "'Roboto', sans-serif",
         textAlign: 'left',

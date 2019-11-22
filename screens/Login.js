@@ -36,12 +36,6 @@ class Login extends Component {
         return (
             <>
                 <ScrollView>
-                    <HeaderComponent
-                        icon={require('../assets/Doner.png')}
-                        avatar={require('../assets/icon.png')}
-                        onNavigate={() => {
-                            this.props.navigation.openDrawer()
-                        }} />
                     <View style={styles.container}>
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>
@@ -115,7 +109,7 @@ class Login extends Component {
                             <Text style={{
                                 fontSize: 17,
                                 opacity: .6,
-                                color: '#186057'
+                                color: '#2c3e50'
                             }}>or login with</Text>
                             <SocialShare />
                         </View>
@@ -134,12 +128,12 @@ const styles = StyleSheet.create({
     titleWrapper: {
         marginLeft: 20,
         flexDirection: 'row',
-        marginTop: 50
+        marginTop: 10
     },
 
     ColoredText: {
         fontSize: 30,
-        color: '#186057',
+        color: '#2c3e50',
         fontWeight: 'bold',
         fontFamily: "'Roboto', sans-serif",
         textAlign: 'left',

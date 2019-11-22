@@ -24,8 +24,8 @@ const SocialShare = () => {
 const styles = StyleSheet.create({
     facebook: {
         marginTop: 10,
-        opacity: .3,
-        color: '#186057'
+        opacity: .6,
+        color: '#2c3e50'
     }
 });
 

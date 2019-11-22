@@ -6,15 +6,14 @@ import {
   Image,
   ScrollView,
   StatusBar,
-  Alert,
-  Linking,
   TouchableOpacity,
   RefreshControl,
   SafeAreaView
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PageLoader from './PageLoader';
-import HeaderComponent from '../components/HeaderComponent';
+
+
 
 class Welcome extends React.Component {
     constructor(props) {
@@ -42,7 +41,7 @@ class Welcome extends React.Component {
         return (
         <>
         <SafeAreaView style={{flex: 1}}>
-        <StatusBar barStyle="light-content" backgroundColor="#186057" />
+        <StatusBar barStyle="light-content" backgroundColor="#2c3e50" />
         <ScrollView
         refreshControl={
             <RefreshControl
@@ -78,27 +77,27 @@ class Welcome extends React.Component {
                             }} />
                     </View>
                         <LinearGradient 
-                        start={{x: 0, y: 0}} end={{x: 1, y: 0}}
-                        colors={['#57C7B8', '#186057']} 
+                        start={{x: 0, y: 1}} end={{x: 1, y: 0}}
+                        colors={['#2c3e50', '#3498db']} 
                         style={styles.linearGradient} 
                         >
                         <TouchableOpacity 
                         onPress={() => this.props.navigation.navigate('Explore')}>
                         <Text style={styles.buttonText}>
-                            Search for Hotels
+                            Explore Hotels
                         </Text>
                         </TouchableOpacity>
                         
                         </LinearGradient>
                     <LinearGradient 
-                        start={{x: 0, y: 0}} end={{x: 1, y: 0}}
-                        colors={['#57C7B8', '#186057']} 
-                        style={styles.linearGradient} 
+                        start={{x: 1, y: 0}} end={{x: 0, y: 1}}
+                        colors={['#2c3e50', '#3498db']}
+                        style={styles.linearGradient1} 
                         >
                         <TouchableOpacity 
-                        onPress={() => this.props.navigation.navigate('SprSignUp')}>
+                        onPress={() => this.props.navigation.navigate('Role')}>
                         <Text style={styles.buttonText}>
-                            Register your hotel
+                            Register
                         </Text>
                         </TouchableOpacity>
                     </LinearGradient>
@@ -115,8 +114,7 @@ class Welcome extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5FCFF',
-        zIndex: 99999
+        backgroundColor: '#fff',
     },
     titleWrapper: {
         alignSelf: 'center',
@@ -130,7 +128,7 @@ const styles = StyleSheet.create({
         fontFamily: "'Roboto', sans-serif",
     },
     ColoredText: {
-        color: '#186057',
+        color: '#2c3e50',
         fontFamily: "'Roboto', sans-serif",
     },
     inputWrapper: {
@@ -139,10 +137,18 @@ const styles = StyleSheet.create({
     linearGradient: {
         paddingLeft: 15,
         paddingRight: 15,
-        borderRadius: 4,
-        width: "90%",
+        width: "95%",
         alignSelf:'center',
         marginTop: 20,
+        elevation: 5,
+        zIndex: 3
+      },
+      linearGradient1: {
+        paddingLeft: 15,
+        paddingRight: 15,
+        width: "95%",
+        alignSelf:'center',
+        marginTop: 10,
         marginBottom: 10,
         elevation: 5,
         zIndex: 3
@@ -190,7 +196,7 @@ const styles = StyleSheet.create({
         margin: 10, 
         width:"100%",
         textAlign: 'center',
-        color: '#186057'
+        color: '#2c3e50'
     }
 });
 

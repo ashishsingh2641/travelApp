@@ -8,7 +8,7 @@ const FormInput = (props) => {
         onBlur, autoFocus} = props;
     return (
         <View style={formFieldLabel === 'password' || formFieldLabel === "Password"? styles.formContainer2 : styles.formContainer1}>
-            <Text style={{ marginTop: 10, marginBottom: 10 }}>{formFieldLabel}
+            <Text style={{ marginTop: 10, marginBottom: 10 , fontSize: 15,}}>{formFieldLabel}
             {required === true ? <Text style={{color: 'red'}}>*</Text> : <Text /> }</Text>
             <TextInput
                 multipleLine={props.multipleLine}
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right:10,
         top:50,
-        color: '#186057',
+        color: '#2c3e50',
     }
 });
 
