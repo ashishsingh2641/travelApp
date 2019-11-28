@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
+import LoginStyle from '../theme/LoginStyle';
 
 const validationSchema = yup.object().shape({
     firstName: yup
@@ -33,6 +34,7 @@ class Login extends Component {
         }
     }
     render() {
+        const styles = LoginStyle;
         return (
             <>
                 <ScrollView>
@@ -120,30 +122,6 @@ class Login extends Component {
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-    },
-    titleWrapper: {
-        marginLeft: 20,
-        flexDirection: 'row',
-        marginTop: 10
-    },
 
-    ColoredText: {
-        fontSize: 30,
-        color: '#2c3e50',
-        fontWeight: 'bold',
-        fontFamily: "'Roboto', sans-serif",
-        textAlign: 'left',
-        marginBottom: 40
-    },
-    orLoginUsing: {
-        marginTop: 50,
-        alignItems: 'center',
-    },
-    
-});
 
 export default Login;

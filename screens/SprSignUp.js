@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, ScrollView,ActivityIndicator, Image, TextInput, RefreshControl } from 'react-native';
+import { View, Text, ScrollView,ActivityIndicator, Image, TextInput, RefreshControl } from 'react-native';
 import HeaderComponent from '../components/HeaderComponent';
 import FormInput from '../components/FormInput';
 import Button from '../components/Button';
 import { Formik } from 'formik';
 import axios from 'axios';
-import Check from '../components/Check';
-import ImagePicker from 'react-native-image-picker';
+import {connect} from 'react-redux';
+import {handleSignUp} from '../actions/SignUpAction';
+// import Check from '../components/Check';
+// import ImagePicker from 'react-native-image-picker';
 import validation from './utils/validationSchema';
-const  checkProperty= ["sell", "buy"];
+import SprSignUpStyle from '../theme/SprSignUpStyle';
+
+// const  checkProperty= ["sell", "buy"];
 
 class SprSignUp extends Component {
     constructor(props){
@@ -22,17 +26,17 @@ class SprSignUp extends Component {
             photo: null
         }
     }
-    handleChoosePhoto = () => {
-        const options = {
-          noData: true,
-        }
-        ImagePicker.launchImageLibrary(options, response => {
-          if (response.uri) {
-            this.setState({ photo: response })
-          }
-        });
+    // handleChoosePhoto = () => {
+    //     const options = {
+    //       noData: true,
+    //     }
+    //     ImagePicker.launchImageLibrary(options, response => {
+    //       if (response.uri) {
+    //         this.setState({ photo: response })
+    //       }
+    //     });
         
-    }
+    // }
     toggleIcon = (e) => {
         this.setState({
             count: this.state.count+1
@@ -57,7 +61,8 @@ class SprSignUp extends Component {
         });
     }
     render() {
-        const {photo} = this.state;
+        const styles = SprSignUpStyle;
+        // const {photo} = this.state;
         const receivedValue = this.props.navigation.getParam('role');
         //alert(receivedValue);
         return (
@@ -70,57 +75,26 @@ class SprSignUp extends Component {
                                 </Text>
                             </View>
                             <Formik
-                                initialValues={{ name: '', email: '', password: '', phoneNumber: '' }}
-                                onSubmit={(values, {resetForm}) => {
-                                        this.setState({
-                                            isLoading: true
-                                        });
-                                        const createFormData = (photo, body) => {
-                                            const data = new FormData();
-                                            debugger;
-                                          
-                                            data.append("photo", {
-                                              name: photo.fileName,
-                                              type: photo.type,
-                                              uri:
-                                                Platform.OS === "android" ? photo.uri : photo.uri.replace("file://", "")
-                                            });
-                                          
-                                            Object.keys(body).forEach(key => {
-                                              data.append(key, body[key]);
-                                            });
-                                          
-                                            return data;
-                                          };
-                                        //alert(JSON.stringify(values));
-                                        //axios.get('http://192.168.0.107:5001/api/v1/login') // Call the fetch function passing the url of the API as a parameter
-                                        axios.get("http://172.16.163.172:5001/api/v1/login")
-                                        .then((res) => {
-                                            if (res !== undefined) {
-                                                this.setState({
-                                                    isLoading: false
-                                                })
-                                            }
-                                        })
-                                        .catch(function(error) {
-                                            //console.log(":::::::::::::::::::hi:::::::::::::")
-                                        console.log(error)
-                                        });
-                                        fetch("http://172.16.163.172:5001/api/upload", {
-                                            method: "POST",
-                                            body: createFormData(this.state.photo, { userId: "123" })
-                                        })
-                                            .then(response => response.json())
-                                            .then(response => {
-                                            console.log("upload succes", response);
-                                            alert("Upload success!");
-                                            this.setState({ photo: null });
-                                                this.props.navigation.navigate("Login");
-                                            })
-                                            .catch(error => {
-                                            console.log("upload error", error);
-                                            alert("Upload failed!");
-                                            }); 
+                                initialValues={{
+                                    firstName: this.props.firstName, 
+                                    lastName: this.props.lastName, 
+                                    email: this.props.email, 
+                                    password: this.props.password, 
+                                    phnNumber: this.props.phnNumber,
+                                    role: this.props.role}}
+                                onSubmit={(values) => {
+                                    this.setState({
+                                        isLoading: true
+                                    });
+                                    const data = {
+                                        firstName:  values.firstName,
+                                        lastName: values.lastName,
+                                        email: values.email,
+                                        password: values.password, 
+                                        phnNumber: values.phnNumber,
+                                        role: receivedValue
+                                    }
+                                    this.props.handleSignUp(data)
                                 }}
                                 validationSchema={validation}>
                                 {formikProps => (
@@ -132,15 +106,27 @@ class SprSignUp extends Component {
                                             value={'Hotel_' + this.uuidv4()} />
                                         <FormInput
                                             style={{ borderWidth: 1, fontSize: 20,
-                                            borderColor: formikProps.touched.name && formikProps.errors.name ? 'red' : 'grey' }}
-                                            formFieldLabel="Name"
+                                            borderColor: formikProps.touched.firstName && formikProps.errors.firstName ? 'red' : 'grey' }}
+                                            formFieldLabel="first Name"
                                             placeHolderText="Jhon Doe"
-                                            handleChange={formikProps.handleChange('name')}
-                                            onVlur={formikProps.handleBlur('name')}
-                                            value={formikProps.values.name}
+                                            handleChange={formikProps.handleChange('firstName')}
+                                            onVlur={formikProps.handleBlur('firstName')}
+                                            value={formikProps.values.firstName}
                                             required={true} 
                                             autoFocus={true}
-                                            validateText={formikProps.touched.name && formikProps.errors.name}
+                                            validateText={formikProps.touched.firstName && formikProps.errors.firstName}
+                                            />
+                                        <FormInput
+                                            style={{ borderWidth: 1, fontSize: 20,
+                                            borderColor: formikProps.touched.lastName && formikProps.errors.lastName ? 'red' : 'grey' }}
+                                            formFieldLabel="last Name"
+                                            placeHolderText="Jhon Doe"
+                                            handleChange={formikProps.handleChange('lastName')}
+                                            onVlur={formikProps.handleBlur('lastName')}
+                                            value={formikProps.values.lastName}
+                                            required={true} 
+                                            autoFocus={true}
+                                            validateText={formikProps.touched.lastName && formikProps.errors.lastName}
                                             />
                                         <FormInput
                                             style={{ borderWidth: 1,  fontSize: 20,
@@ -157,7 +143,7 @@ class SprSignUp extends Component {
 
                                         <FormInput
                                             style={{ borderWidth: 1,  fontSize: 20,
-                                            borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'grey' }}
+                                            borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : '#2c3e50' }}
                                             formFieldLabel="Password"
                                             secureTextEntry={this.state.secureTextEntry}
                                             toggleIcon={(e) => {
@@ -176,15 +162,15 @@ class SprSignUp extends Component {
                                             />
                                         <FormInput
                                             style={{ borderWidth: 1,  fontSize: 20,
-                                            borderColor: formikProps.touched.phoneNumber && formikProps.errors.poneNumber ? 'red' : 'grey' }}
-                                            formFieldLabel="Phone"
-                                            onBlur={formikProps.handleBlur('phoneNumber')}
+                                            borderColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'grey' }}
+                                            formFieldLabel="Phone Number"
+                                            onBlur={formikProps.handleBlur('phnNumber')}
                                             placeHolderText="Please enter PhoneNumber"
-                                            handleChange={formikProps.handleChange('phoneNumber')}
-                                            value={formikProps.values.phoneNumber} required={true} 
-                                            validateText={formikProps.touched.phoneNumber && formikProps.errors.phoneNumber}
+                                            handleChange={formikProps.handleChange('phnNumber')}
+                                            value={formikProps.values.phnNumber} required={true} 
+                                            validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
                                             />
-                                        <FormInput
+                                        {/* <FormInput
                                             style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.AddressLine1 && formikProps.errors.AddressLine1 ? 'red' : 'grey' }}
                                             formFieldLabel="AddressLine1"
@@ -193,8 +179,8 @@ class SprSignUp extends Component {
                                             handleChange={formikProps.handleChange('AddressLine1')}
                                             value={formikProps.values.AddressLine1} required={true} 
                                             validateText={formikProps.touched.AddressLine1 && formikProps.errors.AddressLine1}
-                                            />
-                                        <FormInput
+                                            /> */}
+                                        {/* <FormInput
                                             style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.AddressLine2 && formikProps.errors.AddressLine2 ? 'red' : 'grey' }}
                                             formFieldLabel="AddressLine2"
@@ -203,8 +189,8 @@ class SprSignUp extends Component {
                                             handleChange={formikProps.handleChange('AddressLine2')}
                                             value={formikProps.values.AddressLine2} required={true} 
                                             validateText={formikProps.touched.AddressLine2 && formikProps.errors.AddressLine2}
-                                            />
-                                        <FormInput
+                                            /> */}
+                                        {/* <FormInput
                                             style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.City && formikProps.errors.City ? 'red' : 'grey' }}
                                             formFieldLabel="City"
@@ -213,8 +199,8 @@ class SprSignUp extends Component {
                                             handleChange={formikProps.handleChange('City')}
                                             value={formikProps.values.City} required={true} 
                                             validateText={formikProps.touched.City && formikProps.errors.City}
-                                        />
-                                        <FormInput
+                                        /> */}
+                                        {/* <FormInput
                                             style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.pincode && formikProps.errors.pincode ? 'red' : 'grey' }}
                                             formFieldLabel="Pincode"
@@ -223,8 +209,8 @@ class SprSignUp extends Component {
                                             handleChange={formikProps.handleChange('pincode')}
                                             value={formikProps.values.pincode} required={true} 
                                             validateText={formikProps.touched.pincode && formikProps.errors.pincode}
-                                        />
-                                        <FormInput
+                                        /> */}
+                                        {/* <FormInput
                                             style={{ borderWidth: 1, fontSize: 20,
                                             borderColor: formikProps.touched.State && formikProps.errors.State ? 'red' : 'grey' }}
                                             formFieldLabel="State"
@@ -233,17 +219,17 @@ class SprSignUp extends Component {
                                             handleChange={formikProps.handleChange('State')}
                                             value={formikProps.values.State} required={true} 
                                             validateText={formikProps.touched.State && formikProps.errors.State}
-                                        />
+                                        /> */}
                                         <View>
-                                        {checkProperty.map((item) => {
+                                        {/* {checkProperty.map((item) => {
                                             return (
                                                 <React.Fragment key={item}>
                                                     <Check label={item} />
                                                 </React.Fragment>
                                             )
-                                        })}
+                                        })} */}
                                         </View>
-                                           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                                           {/* <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                                                 {photo && (
                                                 <Image
                                                     source={{ uri: photo.uri }}
@@ -251,7 +237,7 @@ class SprSignUp extends Component {
                                                 />
                                                 )}
                                                 <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />
-                                            </View>
+                                            </View> */}
                                         {this.state.isLoading === true ? (
                                          <ActivityIndicator />
                                          ) : (
@@ -280,31 +266,25 @@ class SprSignUp extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    const data = state.sinupdata;
+    return {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phnNumber: data.phnNumber,
+        role: data.role,
+        password: data.password,
+        sucessMessage: data.sucessMessage
+    }
+} 
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#F5FCFF',
-    },
-    titleWrapper: {
-        marginLeft: 20,
-        flexDirection: 'row',
-        marginTop: 50
-    },
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleSignUp: (data) => {
+        dispatch(handleSignUp(data))
+      }
+    }
+}
 
-    ColoredText: {
-        fontSize: 30,
-        color: '#2c3e50',
-        fontWeight: 'bold',
-        fontFamily: "'Roboto', sans-serif",
-        textAlign: 'left',
-        marginBottom: 40
-    },
-    orLoginUsing: {
-        marginTop: 50,
-        alignItems: 'center',
-    },
-    
-});
-
-export default SprSignUp;
+export default connect(mapStateToProps, mapDispatchToProps)(SprSignUp);

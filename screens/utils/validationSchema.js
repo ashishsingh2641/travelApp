@@ -3,8 +3,10 @@ const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2
 
 
 const validation = yup.object().shape({
-    name: yup
+    firstName: yup
     .string().label('firstName').required(),
+    lastName: yup
+    .string().label('lastName').required(),
     email: yup
         .string()
         .label('Email')
@@ -16,7 +18,7 @@ const validation = yup.object().shape({
         .required()
         .min(2, 'Seems a bit short...')
         .max(15, 'We prefer insecure system, try a shorter password.'),
-        phoneNumber: yup
+        phnNumber: yup
             .string()
             .label('Phone Number')
             .required()
