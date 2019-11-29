@@ -6,7 +6,7 @@ import Button from '../components/Button';
 import { Formik } from 'formik';
 import axios from 'axios';
 import {connect} from 'react-redux';
-import {handleSignUp} from '../actions/SignUpAction';
+import {Signup} from '../actions/SignUpAction';
 // import Check from '../components/Check';
 // import ImagePicker from 'react-native-image-picker';
 import validation from './utils/validationSchema';
@@ -83,18 +83,10 @@ class SprSignUp extends Component {
                                     phnNumber: this.props.phnNumber,
                                     role: this.props.role}}
                                 onSubmit={(values) => {
-                                    this.setState({
-                                        isLoading: true
-                                    });
-                                    const data = {
-                                        firstName:  values.firstName,
-                                        lastName: values.lastName,
-                                        email: values.email,
-                                        password: values.password, 
-                                        phnNumber: values.phnNumber,
-                                        role: receivedValue
-                                    }
-                                    this.props.handleSignUp(data)
+                                    const _data = values;
+                                    this.props.Signup(_data, () => {
+                                        this.props.navigation.navigate('Login')
+                                    })
                                 }}
                                 validationSchema={validation}>
                                 {formikProps => (
@@ -238,7 +230,7 @@ class SprSignUp extends Component {
                                                 )}
                                                 <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />
                                             </View> */}
-                                        {this.state.isLoading === true ? (
+                                        {this.props.isPending === true ? (
                                          <ActivityIndicator />
                                          ) : (
                                             <Button buttonAction={() => {
@@ -275,14 +267,15 @@ const mapStateToProps = (state) => {
         phnNumber: data.phnNumber,
         role: data.role,
         password: data.password,
-        sucessMessage: data.sucessMessage
+        isPending: data.isPending
     }
 } 
 
 const mapDispatchToProps = (dispatch) => {
+    debugger;
     return {
-        handleSignUp: (data) => {
-        dispatch(handleSignUp(data))
+        Signup: (data) => {
+        dispatch(Signup(data))
       }
     }
 }

@@ -1,293 +1,293 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-MERGED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-MERGED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-21:12
-MERGED from [:react-native-screens] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-reanimated] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-vector-icons] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-gesture-handler] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-linear-gradient] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-linear-gradient\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.react:react-native:0.61.3] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\aa4dbf9b3947f942104f9fcb0e2327f9\AndroidManifest.xml:2:1-13:12
-MERGED from [org.webkit:android-jsc:r245459] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b95d68df8f4cc6a8d71318d39d0e8d09\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\23b98b1ef562f7c7b496726ffc749b88\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9ca40e431e44b582b0edf60ae55b937d\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\f20b416d8b76ca557848ee497333fc09\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\45133a9e40860342293759093a0c36c8\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9a1fcccf0244da4ac579b7ad5200f930\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9fc4594377b8da7f04c9ede2902e45e9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\751cb73e093ab9d00c5f2a3ce850cbd7\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\beb838da7aabe7bec1fbe6021342ae87\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\126668d0da200ef403e005b5473c9e8b\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\0e1c819f1f160f54cd9b07eafbbc4eb6\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6c7fb20a35228d6add8d925fe1d18f22\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4a3839b7457a73aa9dd2998a88d29159\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\009dd93384cb1e050ddff86a72792420\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\869c6d065eaf6375c2cd252eac6e90a5\AndroidManifest.xml:2:1-13:12
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6f77618d4217276f8489a6299701164e\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\a32b7e8acdc5b5d0f35c082a04aef2a6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b36cb5a77fe35be38104689187bf7d54\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1e40236611335dba5b2c864613f43c9e\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\24cd5d33f3b7ab326ba80091db86ce89\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\8fd7678eca5899b0e2fabaec5097303a\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4034d1328647e60aacd941ed5b5ef015\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\afbcc97939302e1eb1b1f4b71cb5d971\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\49ffc18e248a1d07e8b6fe337a0b7e4e\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\06874be1506cc760809473a227f7b36f\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\45824fc54ca6c15a59c140731199e214\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\497f3b4d1fce0bce6f8fb41d3e0c0993\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4f15fda4ea21cfcaa4dba73e332187c5\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9847976469a6e8ec9e22b0264939d1b9\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\7138dcdc80b230dbafff36b8f6918d9b\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4e9e8575dd3e0f563e92d6c2ac2d46c4\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9df6582fda396be83533d7213fafba54\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b3fb5a28b2c46b5b6fa7a7810f6304c8\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\5e7db538847dcfe7ffddd726fe16f646\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1a6da9d69090f7ccb86dba9728c992d6\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9be2dfc301c4862e793751d9a6e1329d\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1033669fb4c58d96f652b1146defd41c\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4e1c09bf57100db7bfa5e3c0ea7b746f\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\26765ce63370946d64558fd295eeeebd\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\de59ab441b3f3f1005e7f597c5758c85\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6144f237191d1d2711b3d164dc36277a\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\f244c891ee2a30de39da75b730284c7a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6e39129ebec31825c09b5302dcefaef2\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:2:1-8:12
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:2:1-8:12
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:2:1-8:12
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+MERGED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+MERGED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:react-native-screens] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-vector-icons] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-linear-gradient] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.61.3] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/32ed1f416e68327a7f969a2a5aba4db3/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r245459] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/1ec58602cb7d932cad7a0beac9b42019/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2f30cd349cb35c7a1e43a38993df6da1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a460216184be83bc7be6f5df3ac07929/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/b81cd673a33c86b78c4b06c3a8206db5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/5efcc336c13991019feba6758d708389/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/caf502786f91c8cc8569d7dcf132af8a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/8c4166e137a0c31857bbccf10f42cc6f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e6fbc723b5f13370c7308b8560e236db/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3ea85a9d514f18fc6c70fc0bcee1b19c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/dd1789d82562097fec4f6d9781f34e91/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/41f56c68c76d75e584a4e88bf443c1d5/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/61b588ec6a0561326e6d3c2dd9001366/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/09159c70204fc1acb980640f05d1dace/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a2c1df413ac6cdfde3bf319358c7009a/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/34b2a4ac67166e237e6bfa2c645e0afc/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/872a3e19b86029f0b20513edf69928b0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/dfbf9ec7b386242a738750f1f828c99f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ded1a3bc3329db969261ca5160a930a0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/0b953c12542fbb7be58f6c3b5fd3fbe1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e356da5e5e0a19e387e396c6c501eff3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7fa007584bdde8636062be732dc5e328/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ce58ecf0de12deaf1ce2ec884dea0f12/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/59b6127c5ba158581ca9d96b2f6bc2a1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/5aaba2bd80740e533e2b09768bfdf5e4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ccad7d9cc2ab616f413860538f0f0f2c/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/fbd1fd5ff8f7c5d8ba91655d428a7207/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/96920db424429d528161a41adba67b38/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eeeb0f701dade525be49461e9eda79c/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a1467a96bb1c9fda6a245ac092ea8e3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/31e0d08c9e942dbee3f0761a70b5b1f5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a6f87f4ece8c466913c45569ba7ce7db/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a48b60d321b51f38091d1ece8e250bf1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e67169184681bf8dc23400fdb0e2c442/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/17cdcfc286c49dcb0bb489c8c90ef37c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/bae64df967ff12fc882ff438c249fb0e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/0ef54964008cb5f3eb9a968fb5ae89bd/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/12fb76e2ecaaa52bef93daad8e41dfc1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/073ba75007f5af1a1ce27bff27751e1c/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/f63787e4d3d05dbf30da91c7b8121a5b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eb2e48fa55744a8d8adffaa1ab9a70f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/93a7c8e244c6cf1928f451d3d05a2bd2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a02838a47cfc00623e4f38bb218f759e/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 	package
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:2:3-26
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:2:3-26
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:2:3-26
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:2:3-26
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:3:5-51
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:1-29:12
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:1:11-69
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:4:5-67
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:4:22-64
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:5:1-75
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:5:1-75
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:5:18-72
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:5:18-72
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:6:1-73
-MERGED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:6:1-73
-MERGED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:6:1-73
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:6:1-73
+MERGED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:6:1-73
+MERGED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:6:1-73
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:6:18-71
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:6:18-71
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:7:1-61
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:7:1-61
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:7:18-58
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:7:18-58
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:8:2-77
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:8:2-77
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:8:19-75
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:8:19-75
 application
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:9:5-27:19
-MERGED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:9:5-27:19
-MERGED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:9:5-27:19
-MERGED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-19:19
-MERGED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-19:19
-MERGED from [com.facebook.react:react-native:0.61.3] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\aa4dbf9b3947f942104f9fcb0e2327f9\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.61.3] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\aa4dbf9b3947f942104f9fcb0e2327f9\AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\23b98b1ef562f7c7b496726ffc749b88\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\23b98b1ef562f7c7b496726ffc749b88\AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\869c6d065eaf6375c2cd252eac6e90a5\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\869c6d065eaf6375c2cd252eac6e90a5\AndroidManifest.xml:11:5-20
-MERGED from [androidx.core:core:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9847976469a6e8ec9e22b0264939d1b9\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9847976469a6e8ec9e22b0264939d1b9\AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9df6582fda396be83533d7213fafba54\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9df6582fda396be83533d7213fafba54\AndroidManifest.xml:24:5-25:19
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:9:5-27:19
+MERGED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:9:5-27:19
+MERGED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:9:5-27:19
+MERGED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [com.facebook.react:react-native:0.61.3] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/32ed1f416e68327a7f969a2a5aba4db3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.3] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/32ed1f416e68327a7f969a2a5aba4db3/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2f30cd349cb35c7a1e43a38993df6da1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2f30cd349cb35c7a1e43a38993df6da1/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a2c1df413ac6cdfde3bf319358c7009a/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a2c1df413ac6cdfde3bf319358c7009a/AndroidManifest.xml:11:5-20
+MERGED from [androidx.core:core:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eeeb0f701dade525be49461e9eda79c/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eeeb0f701dade525be49461e9eda79c/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a6f87f4ece8c466913c45569ba7ce7db/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a6f87f4ece8c466913c45569ba7ce7db/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9847976469a6e8ec9e22b0264939d1b9\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eeeb0f701dade525be49461e9eda79c/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:11:7-39
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:11:7-39
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:11:7-39
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:11:7-39
 	tools:ignore
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:7:75-114
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:13:7-52
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:13:7-52
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:13:7-52
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:13:7-52
 	tools:targetApi
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:7:54-74
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:7:54-74
 	android:icon
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:12:7-41
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:12:7-41
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:12:7-41
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:12:7-41
 	android:allowBackup
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:14:7-34
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:14:7-34
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:14:7-34
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:14:7-34
 	android:theme
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:15:7-38
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:15:7-38
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:15:7-38
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:15:7-38
 	android:usesCleartextTraffic
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml:7:18-53
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml:7:18-53
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:10:7-38
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:10:7-38
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:10:7-38
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:10:7-38
 activity#com.travelapp.MainActivity
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:16:7-25:18
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:16:7-25:18
 	android:label
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:18:9-41
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:18:9-41
 	android:windowSoftInputMode
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:20:9-51
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:20:9-51
 	android:configChanges
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:19:9-79
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:19:9-79
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:17:9-37
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:17:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:21:9-24:25
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:21:9-24:25
 action#android.intent.action.MAIN
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:22:13-65
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:22:13-65
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:22:21-62
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:22:21-62
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:23:13-73
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:23:13-73
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:23:23-70
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:23:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:26:7-84
+ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:26:7-84
 	android:name
-		ADDED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml:26:17-81
+		ADDED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml:26:17-81
 uses-sdk
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-MERGED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-screens] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-screens] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-reanimated] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-reanimated] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-gesture-handler] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-gesture-handler] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-linear-gradient] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-linear-gradient\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-linear-gradient] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-linear-gradient\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.3] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\aa4dbf9b3947f942104f9fcb0e2327f9\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.3] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\aa4dbf9b3947f942104f9fcb0e2327f9\AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b95d68df8f4cc6a8d71318d39d0e8d09\AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b95d68df8f4cc6a8d71318d39d0e8d09\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\23b98b1ef562f7c7b496726ffc749b88\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\23b98b1ef562f7c7b496726ffc749b88\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9ca40e431e44b582b0edf60ae55b937d\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9ca40e431e44b582b0edf60ae55b937d\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\f20b416d8b76ca557848ee497333fc09\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\f20b416d8b76ca557848ee497333fc09\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\45133a9e40860342293759093a0c36c8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\45133a9e40860342293759093a0c36c8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9a1fcccf0244da4ac579b7ad5200f930\AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9a1fcccf0244da4ac579b7ad5200f930\AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9fc4594377b8da7f04c9ede2902e45e9\AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9fc4594377b8da7f04c9ede2902e45e9\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\751cb73e093ab9d00c5f2a3ce850cbd7\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\751cb73e093ab9d00c5f2a3ce850cbd7\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\beb838da7aabe7bec1fbe6021342ae87\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\beb838da7aabe7bec1fbe6021342ae87\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\126668d0da200ef403e005b5473c9e8b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\126668d0da200ef403e005b5473c9e8b\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\0e1c819f1f160f54cd9b07eafbbc4eb6\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\0e1c819f1f160f54cd9b07eafbbc4eb6\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6c7fb20a35228d6add8d925fe1d18f22\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6c7fb20a35228d6add8d925fe1d18f22\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4a3839b7457a73aa9dd2998a88d29159\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4a3839b7457a73aa9dd2998a88d29159\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\009dd93384cb1e050ddff86a72792420\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\009dd93384cb1e050ddff86a72792420\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\869c6d065eaf6375c2cd252eac6e90a5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\869c6d065eaf6375c2cd252eac6e90a5\AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6f77618d4217276f8489a6299701164e\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6f77618d4217276f8489a6299701164e\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\a32b7e8acdc5b5d0f35c082a04aef2a6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\a32b7e8acdc5b5d0f35c082a04aef2a6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b36cb5a77fe35be38104689187bf7d54\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b36cb5a77fe35be38104689187bf7d54\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1e40236611335dba5b2c864613f43c9e\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1e40236611335dba5b2c864613f43c9e\AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\24cd5d33f3b7ab326ba80091db86ce89\AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\24cd5d33f3b7ab326ba80091db86ce89\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\8fd7678eca5899b0e2fabaec5097303a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\8fd7678eca5899b0e2fabaec5097303a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4034d1328647e60aacd941ed5b5ef015\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4034d1328647e60aacd941ed5b5ef015\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\afbcc97939302e1eb1b1f4b71cb5d971\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\afbcc97939302e1eb1b1f4b71cb5d971\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\49ffc18e248a1d07e8b6fe337a0b7e4e\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\49ffc18e248a1d07e8b6fe337a0b7e4e\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\06874be1506cc760809473a227f7b36f\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\06874be1506cc760809473a227f7b36f\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\45824fc54ca6c15a59c140731199e214\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\45824fc54ca6c15a59c140731199e214\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\497f3b4d1fce0bce6f8fb41d3e0c0993\AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\497f3b4d1fce0bce6f8fb41d3e0c0993\AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4f15fda4ea21cfcaa4dba73e332187c5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4f15fda4ea21cfcaa4dba73e332187c5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9847976469a6e8ec9e22b0264939d1b9\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9847976469a6e8ec9e22b0264939d1b9\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\7138dcdc80b230dbafff36b8f6918d9b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\7138dcdc80b230dbafff36b8f6918d9b\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4e9e8575dd3e0f563e92d6c2ac2d46c4\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4e9e8575dd3e0f563e92d6c2ac2d46c4\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9df6582fda396be83533d7213fafba54\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9df6582fda396be83533d7213fafba54\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b3fb5a28b2c46b5b6fa7a7810f6304c8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\b3fb5a28b2c46b5b6fa7a7810f6304c8\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\5e7db538847dcfe7ffddd726fe16f646\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\5e7db538847dcfe7ffddd726fe16f646\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1a6da9d69090f7ccb86dba9728c992d6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1a6da9d69090f7ccb86dba9728c992d6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9be2dfc301c4862e793751d9a6e1329d\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\9be2dfc301c4862e793751d9a6e1329d\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1033669fb4c58d96f652b1146defd41c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\1033669fb4c58d96f652b1146defd41c\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4e1c09bf57100db7bfa5e3c0ea7b746f\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\4e1c09bf57100db7bfa5e3c0ea7b746f\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\26765ce63370946d64558fd295eeeebd\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\26765ce63370946d64558fd295eeeebd\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\de59ab441b3f3f1005e7f597c5758c85\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\de59ab441b3f3f1005e7f597c5758c85\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6144f237191d1d2711b3d164dc36277a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6144f237191d1d2711b3d164dc36277a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\f244c891ee2a30de39da75b730284c7a\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\f244c891ee2a30de39da75b730284c7a\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6e39129ebec31825c09b5302dcefaef2\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\TCTSIT\.gradle\caches\transforms-2\files-2.1\6e39129ebec31825c09b5302dcefaef2\AndroidManifest.xml:5:5-7:41
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
-INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-screens] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-linear-gradient] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-linear-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.3] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/32ed1f416e68327a7f969a2a5aba4db3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.3] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/32ed1f416e68327a7f969a2a5aba4db3/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/1ec58602cb7d932cad7a0beac9b42019/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/1ec58602cb7d932cad7a0beac9b42019/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2f30cd349cb35c7a1e43a38993df6da1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2f30cd349cb35c7a1e43a38993df6da1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a460216184be83bc7be6f5df3ac07929/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a460216184be83bc7be6f5df3ac07929/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/b81cd673a33c86b78c4b06c3a8206db5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/b81cd673a33c86b78c4b06c3a8206db5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/5efcc336c13991019feba6758d708389/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/5efcc336c13991019feba6758d708389/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/caf502786f91c8cc8569d7dcf132af8a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/caf502786f91c8cc8569d7dcf132af8a/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/8c4166e137a0c31857bbccf10f42cc6f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/8c4166e137a0c31857bbccf10f42cc6f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e6fbc723b5f13370c7308b8560e236db/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e6fbc723b5f13370c7308b8560e236db/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3ea85a9d514f18fc6c70fc0bcee1b19c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3ea85a9d514f18fc6c70fc0bcee1b19c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/dd1789d82562097fec4f6d9781f34e91/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/dd1789d82562097fec4f6d9781f34e91/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/41f56c68c76d75e584a4e88bf443c1d5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/41f56c68c76d75e584a4e88bf443c1d5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/61b588ec6a0561326e6d3c2dd9001366/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/61b588ec6a0561326e6d3c2dd9001366/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/09159c70204fc1acb980640f05d1dace/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/09159c70204fc1acb980640f05d1dace/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a2c1df413ac6cdfde3bf319358c7009a/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a2c1df413ac6cdfde3bf319358c7009a/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/34b2a4ac67166e237e6bfa2c645e0afc/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/34b2a4ac67166e237e6bfa2c645e0afc/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/872a3e19b86029f0b20513edf69928b0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/872a3e19b86029f0b20513edf69928b0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/dfbf9ec7b386242a738750f1f828c99f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/dfbf9ec7b386242a738750f1f828c99f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ded1a3bc3329db969261ca5160a930a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ded1a3bc3329db969261ca5160a930a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/0b953c12542fbb7be58f6c3b5fd3fbe1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/0b953c12542fbb7be58f6c3b5fd3fbe1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e356da5e5e0a19e387e396c6c501eff3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e356da5e5e0a19e387e396c6c501eff3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7fa007584bdde8636062be732dc5e328/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7fa007584bdde8636062be732dc5e328/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ce58ecf0de12deaf1ce2ec884dea0f12/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ce58ecf0de12deaf1ce2ec884dea0f12/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/59b6127c5ba158581ca9d96b2f6bc2a1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/59b6127c5ba158581ca9d96b2f6bc2a1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/5aaba2bd80740e533e2b09768bfdf5e4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/5aaba2bd80740e533e2b09768bfdf5e4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ccad7d9cc2ab616f413860538f0f0f2c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/ccad7d9cc2ab616f413860538f0f0f2c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/fbd1fd5ff8f7c5d8ba91655d428a7207/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/fbd1fd5ff8f7c5d8ba91655d428a7207/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/96920db424429d528161a41adba67b38/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/96920db424429d528161a41adba67b38/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eeeb0f701dade525be49461e9eda79c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eeeb0f701dade525be49461e9eda79c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a1467a96bb1c9fda6a245ac092ea8e3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a1467a96bb1c9fda6a245ac092ea8e3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/31e0d08c9e942dbee3f0761a70b5b1f5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/31e0d08c9e942dbee3f0761a70b5b1f5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a6f87f4ece8c466913c45569ba7ce7db/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a6f87f4ece8c466913c45569ba7ce7db/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a48b60d321b51f38091d1ece8e250bf1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a48b60d321b51f38091d1ece8e250bf1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e67169184681bf8dc23400fdb0e2c442/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/e67169184681bf8dc23400fdb0e2c442/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/17cdcfc286c49dcb0bb489c8c90ef37c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/17cdcfc286c49dcb0bb489c8c90ef37c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/bae64df967ff12fc882ff438c249fb0e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/bae64df967ff12fc882ff438c249fb0e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/0ef54964008cb5f3eb9a968fb5ae89bd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/0ef54964008cb5f3eb9a968fb5ae89bd/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/12fb76e2ecaaa52bef93daad8e41dfc1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/12fb76e2ecaaa52bef93daad8e41dfc1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/073ba75007f5af1a1ce27bff27751e1c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/073ba75007f5af1a1ce27bff27751e1c/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/f63787e4d3d05dbf30da91c7b8121a5b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/f63787e4d3d05dbf30da91c7b8121a5b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eb2e48fa55744a8d8adffaa1ab9a70f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/7eb2e48fa55744a8d8adffaa1ab9a70f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/93a7c8e244c6cf1928f451d3d05a2bd2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/93a7c8e244c6cf1928f451d3d05a2bd2/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a02838a47cfc00623e4f38bb218f759e/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/a02838a47cfc00623e4f38bb218f759e/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\TCTSIT\Desktop\app\21112019\travelApp\android\app\src\debug\AndroidManifest.xml
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ashishsingh/Desktop/app/travelApp/android/app/src/debug/AndroidManifest.xml
 provider#com.imagepicker.FileProvider
-ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-18:20
+ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
-		ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-47
+		ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-47
 	android:authorities
-		ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-60
+		ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-60
 	android:exported
-		ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
+		ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
-		ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-56
+		ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-56
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-17:58
+ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-17:58
 	android:resource
-		ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-55
+		ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-55
 	android:name
-		ADDED from [:react-native-image-picker] C:\Users\TCTSIT\Desktop\app\21112019\travelApp\node_modules\react-native-image-picker\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:17-67
+		ADDED from [:react-native-image-picker] /Users/ashishsingh/Desktop/app/travelApp/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67

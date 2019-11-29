@@ -1,29 +1,24 @@
-import {SIGN_UP_DATA, SIGN_UP_SUCCESS} from '../types/types';
+import {SIGN_UP_SUCCESS, SIGN_UP_ERROR, SIGN_UP_PENDING} from '../actions/SignUpAction';
 
 const initialState = {
-    role: '',
-    firstName: '', 
-    lastName: '', 
-    email: '', 
-    password: '', 
-    phnNumber: '',
-    sucessMessage: ''
+    isSuccess: false,
+    isPending: false,
+    isError: null
 }
 const signUpReducer = (state = initialState, action) =>  {
     debugger;
     switch(action.type) {
-        case SIGN_UP_DATA:
+        case SIGN_UP_SUCCESS:
             return Object.assign({}, state,  
            {
-            role: action.data.role,
-            firstName: action.data.firstName, 
-            lastName: action.data.lastName, 
-            email: action.data.email, 
-            password: action.data.password, 
-            phnNumber: ''
-        });
-        case SIGN_UP_SUCCESS: 
-            return Object.assign({}, state, {sucessMessage: action.data})
+            isSuccess: action.isSuccess
+            }
+        );
+        case SIGN_UP_PENDING: 
+            return Object.assign({}, state, {isPending: action.isPending})
+
+        case SIGN_UP_ERROR: 
+            return Object.assign({}, state, {isError: action.isError})
         default:
             return state;
     }
