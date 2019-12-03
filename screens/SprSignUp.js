@@ -244,7 +244,10 @@ class SprSignUp extends Component {
                         </View>
                         <View style={styles.orLoginUsing}>
                             <Text 
-                                onPress={() => this.props.navigation.navigate("Login")} style={{
+                                onPress={() => {
+                                    this.props.authSwitch;
+                                     this.props.navigation.navigate("Login")
+                                    }} style={{
                                 fontSize: 17,
                                 opacity: .6,
                                 color: '#186057',
@@ -281,3 +284,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SprSignUp);
+https://github.com/njwest/React-Native-JWT-Client/blob/2fcc983e36bd9ce820e9c4003a0ff7c0bf616766/src/components/Registration.js

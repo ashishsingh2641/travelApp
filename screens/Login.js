@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, ScrollView,ActivityIndicator } from 'react-native';
+import { View, Text, ScrollView,ActivityIndicator } from 'react-native';
+import {connect} from 'react-redux';
 import SocialShare from '../components/SocialShare';
-import HeaderComponent from '../components/HeaderComponent';
 import FormInput from '../components/FormInput';
 import Button from '../components/Button';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
 import LoginStyle from '../theme/LoginStyle';
+import { login } from '../actions/LoginAction';
 
 const validationSchema = yup.object().shape({
     firstName: yup
@@ -49,24 +50,11 @@ class Login extends Component {
                             </View>
                             <Formik
                                 initialValues={{ email: '', password: '' }}
-                                onSubmit={(values, actions) => {
-                                        this.setState({
-                                            isLoading: true
+                                onSubmit={(values) => {
+                                        const _data = values; 
+                                        this.props.login(_data, () => {
+                                            this.props.navigation.navigate('Login')
                                         })
-                                        //alert(JSON.stringify(values));
-                                        axios.get('http://192.168.0.107:5001/api/v1/login') // Call the fetch function passing the url of the API as a parameter
-                                        .then((res) => {
-                                            if (res !== undefined) {
-                                                this.setState({
-                                                    isLoading: false
-                                                })
-                                            }
-                                            this.props.navigation.navigate("Explore");
-                                        })
-                                        .catch(function(error) {
-                                            console.log(":::::::::::::::::::hi:::::::::::::")
-                                        console.log(error)
-                                        });
                                 }}
                                 validationSchema={validationSchema}>
                                 {formikProps => (
@@ -95,7 +83,7 @@ class Login extends Component {
                                             value={formikProps.values.password} required={true} 
                                             validateText={formikProps.touched.password && formikProps.errors.password}
                                             />
-                                        {this.state.isLoading === true ? (
+                                        {this.state.isPending === true ? (
                                          <ActivityIndicator />
                                          ) : (
                                             <Button buttonAction={() => {
@@ -122,6 +110,24 @@ class Login extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    const data = state.sinupdata;
+    return {
+        email: data.email,
+        phnNumber: data.phnNumber,
+        password: data.password,
+        isPending: data.isPending,
+        isError: data.isError
+    }
+} 
 
+const mapDispatchToProps = (dispatch) => {
+    debugger;
+    return {
+        login: (data) => {
+        dispatch(login(data))
+      }
+    }
+}
 
-export default Login;
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
