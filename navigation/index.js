@@ -7,6 +7,7 @@ import Login from '../screens/Login';
 import SprSignUp from '../screens/SprSignUp';
 import Explore from '../screens/Explore';
 import Role from '../screens/Role';
+import AddProperty from '../screens/AddProperty';
 import { createAppContainer } from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -54,12 +55,14 @@ const ExploreScreen = createStackNavigator({
     },
     SprSignUp: { screen: SprSignUp },
     Login: {screen: Login},
-    Explore: {screen: Explore}
+    Explore: {screen: Explore},
+    AddProperty: {screen: AddProperty}
   }, {headerMode: 'screen'});
 export default createAppContainer(createBottomTabNavigator(
     {
         Explore: { screen: ExploreScreen },
         Register: { screen: RegisterScreen },
+        AddProperty: {screen: AddProperty}
     },{
         defaultNavigationOptions: ({ navigation }) => ({
           tabBarIcon: ({ focused, tintColor }) => {
@@ -69,6 +72,8 @@ export default createAppContainer(createBottomTabNavigator(
               iconName = `google-circles`;
             } else if (routeName === 'Register') {
               iconName = `sign-direction`;
+            } else if (routeName === 'AddProperty') {
+              iconName = `home-circle`
             }
     
             // You can return any component that you like here! We usually use an

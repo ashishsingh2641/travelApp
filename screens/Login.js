@@ -6,18 +6,10 @@ import FormInput from '../components/FormInput';
 import Button from '../components/Button';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import axios from 'axios';
 import LoginStyle from '../theme/LoginStyle';
-import { login } from '../actions/LoginAction';
+import {loginAction} from '../actions/LoginAction';
 
-const validationSchema = yup.object().shape({
-    firstName: yup
-    .string().label('firstName').required(),
-    email: yup
-        .string()
-        .label('Email')
-        .email()
-        .required(),
+const validationSchema1 = yup.object().shape({
     password: yup
         .string()
         .label('Password')
@@ -49,47 +41,61 @@ class Login extends Component {
                                 </Text>
                             </View>
                             <Formik
-                                initialValues={{ email: '', password: '' }}
+                                initialValues={{ email: '', password: '', phnNumber: '' }}
                                 onSubmit={(values) => {
-                                        const _data = values; 
-                                        this.props.login(_data, () => {
-                                            this.props.navigation.navigate('Login')
-                                        })
+                                    alert('submitting Login form.....')
+                                    const _data = values;
+                                    const AddProperty = () => {
+                                        this.props.navigation.navigate('AddProperty')
+                                    };
+                                    const Explore = () => { 
+                                        this.props.navigation.navigate('Explore')
+                                    };
+                                    this.props.loginAction(_data, AddProperty, Explore)
                                 }}
-                                validationSchema={validationSchema}>
+                                validationSchema={validationSchema1}
+                               >
                                 {formikProps => (
                                     <React.Fragment>
-                                        <FormInput
+                                        {/* <FormInput
                                             style={{ borderWidth: 1, 
                                             borderColor: formikProps.touched.email && formikProps.errors.email ? 'red' : 'grey' }}
                                             formFieldLabel="Email"
                                             placeHolderText="mikysingh1986@gmail.com"
                                             handleChange={formikProps.handleChange('email')}
-                                            onVlur={formikProps.handleBlur('email')}
+                                            onBlur={formikProps.handleBlur('email')}
                                             value={formikProps.values.email}
                                             required={true} 
                                             autoFocus
                                             validateText={formikProps.touched.email && formikProps.errors.email}
+                                            /> */}
+                                        <FormInput
+                                            style={{borderWidth: 1, 
+                                            borderColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'grey' }}
+                                            formFieldLabel="Phone Number"
+                                            placeHolderText="+91 XXXXXXXXXX"
+                                            handleChange={formikProps.handleChange('phnNumber')}
+                                            onBlur={formikProps.handleBlur('phnNumber')}
+                                            value={formikProps.values.phnNumber}
+                                            required={true} 
+                                            autoFocus
+                                            validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
                                             />
-
                                         <FormInput
                                             style={{ borderWidth: 1, 
                                             borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'grey' }}
                                             formFieldLabel="Password"
-                                            secureTextEntry
+                                            secureTextEntry={false}
                                             onBlur={formikProps.handleBlur('password')}
                                             placeHolderText="Please enter password"
                                             handleChange={formikProps.handleChange('password')}
                                             value={formikProps.values.password} required={true} 
                                             validateText={formikProps.touched.password && formikProps.errors.password}
                                             />
-                                        {this.state.isPending === true ? (
+                                        {this.props.isPending === true ? (
                                          <ActivityIndicator />
                                          ) : (
-                                            <Button buttonAction={() => {
-                                                formikProps.handleSubmit();
-                                               
-                                            }} label="login" />
+                                            <Button buttonAction={formikProps.handleSubmit} label="login-button" />
                                          )}
                                     </React.Fragment>
                                 )}
@@ -111,7 +117,8 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const data = state.sinupdata;
+    debugger;
+    const data = state.loginData;
     return {
         email: data.email,
         phnNumber: data.phnNumber,
@@ -122,10 +129,10 @@ const mapStateToProps = (state) => {
 } 
 
 const mapDispatchToProps = (dispatch) => {
-    debugger;
+    //debugger;
     return {
-        login: (data) => {
-        dispatch(login(data))
+        loginAction: (data, pagePath, newPagepath) => {
+        dispatch(loginAction(data, pagePath, newPagepath))
       }
     }
 }

@@ -70,9 +70,11 @@ class Welcome extends React.Component {
                                             style={{
                                                 alignSelf: 'center',
                                                 width: '100%',
-                                                marginBottom: 30
+                                                marginBottom: 30,
+                                                marginTop: 30
                                             }} />
                                     </View>
+                                    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: '20%'}}>
                                     <LinearGradient
                                         start={{ x: 0, y: 1 }} end={{ x: 1, y: 0 }}
                                         colors={['#2c3e50', '#3498db']}
@@ -95,6 +97,7 @@ class Welcome extends React.Component {
                                             </Text>
                                         </TouchableOpacity>
                                     </LinearGradient>
+                                    </View>
                                 </View>
                             </View>
                         }

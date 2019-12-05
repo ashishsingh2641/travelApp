@@ -30,17 +30,22 @@ const WelcomeStyle = StyleSheet.create({
         alignSelf:'center',
         marginTop: 20,
         elevation: 5,
-        zIndex: 3
+        zIndex: 3,
+        paddingTop: 10,
+        paddingBottom: 10
       },
       linearGradient1: {
         paddingLeft: 15,
         paddingRight: 15,
+        paddingTop: 10,
+        paddingBottom: 10,
         width: "95%",
         alignSelf:'center',
         marginTop: 10,
         marginBottom: 10,
         elevation: 5,
-        zIndex: 3
+        zIndex: 3,
+        marginTop: 20
       },
       buttonText: {
         fontSize: 18,

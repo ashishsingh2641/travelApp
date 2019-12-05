@@ -3,10 +3,14 @@ import {SIGN_UP_SUCCESS, SIGN_UP_ERROR, SIGN_UP_PENDING} from '../actions/SignUp
 const initialState = {
     isSuccess: false,
     isPending: false,
-    isError: null
+    isError: null,
+    email: '',
+    phnNumber: '',
+    password: '',
+    role: ''
 }
 const signUpReducer = (state = initialState, action) =>  {
-    debugger;
+    //debugger;
     switch(action.type) {
         case SIGN_UP_SUCCESS:
             return Object.assign({}, state,  

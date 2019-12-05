@@ -11,7 +11,7 @@ export const Signup = (_data, pagePath) => {
         dispatch(signUpPending(true));
         dispatch(signUpSuccess(false));
         dispatch(signUpError(null));
-        Auth.saveItem("role", _data['role'])
+        //Auth.saveItem("role", _data['role'])
         axios.post('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/user/register', {
             role: _data.role,
             firstName: _data.firstName,
@@ -21,7 +21,7 @@ export const Signup = (_data, pagePath) => {
             phnNumber: _data.phnNumber
         }).then(res => {
             if(res !== undefined){
-                Auth.saveKey("id_token", res.data.jwt);
+                //Auth.saveKey("id_token", res.data.jwt);
                 dispatch(signUpSuccess(true))
                 dispatch(signUpPending(false));
                 return pagePath()                
