@@ -11,7 +11,7 @@ class SearchBox extends Component {
                       elevation: 1,
                       marginTop: 10
                       }} >
-                    <Icon name="search" style= {{color: '#186057',
+                    <Icon name="search" style= {{color: '#2c3e50',
                   marginHorizontal: 10}}/>
                     <Input placeholder="Search" 
                     placeholderTextColor = "grey"
@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
     bookmarks: {
         position: 'absolute',
         right: 10,
-        opacity: .7,
-        color: '#186057',
+        opacity: .9,
+        color: '#2c3e50',
     }
 });
 

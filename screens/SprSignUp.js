@@ -5,7 +5,7 @@ import FormInput from '../components/FormInput';
 import Button from '../components/Button';
 import { Formik } from 'formik';
 import {connect} from 'react-redux';
-import {Signup} from '../actions/SignUpAction';
+import {Signup} from '../actions/SignUpAction'; 
 // import Check from '../components/Check';
 // import ImagePicker from 'react-native-image-picker';
 import validation from './utils/validationSchema';

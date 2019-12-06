@@ -8,6 +8,7 @@ import SprSignUp from '../screens/SprSignUp';
 import Explore from '../screens/Explore';
 import Role from '../screens/Role';
 import AddProperty from '../screens/AddProperty';
+import ForgotPassword from '../screens/ForgotPassword';
 import { createAppContainer } from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -46,6 +47,9 @@ const ExploreScreen = createStackNavigator({
             } 
         },
     Explore: { screen: Explore },
+    Login: {screen: Login},
+    AddProperty: {screen: AddProperty},
+    ForgotPassword: {screen: ForgotPassword}
   });
   
   const RegisterScreen = createStackNavigator({
@@ -56,7 +60,8 @@ const ExploreScreen = createStackNavigator({
     SprSignUp: { screen: SprSignUp },
     Login: {screen: Login},
     Explore: {screen: Explore},
-    AddProperty: {screen: AddProperty}
+    AddProperty: {screen: AddProperty},
+    ForgotPassword: {screen: ForgotPassword}
   }, {headerMode: 'screen'});
 export default createAppContainer(createBottomTabNavigator(
     {
@@ -83,7 +88,7 @@ export default createAppContainer(createBottomTabNavigator(
         }),
         tabBarOptions: {
           activeTintColor: '#5691c8',
-          inactiveTintColor: 'gray',
+          inactiveTintColor: '#999999',
         },
       }
     ));

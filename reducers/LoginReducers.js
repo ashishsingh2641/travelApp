@@ -9,10 +9,8 @@ const initialState = {
     password: ''
 }
 const loginReducer = (state = initialState, action) =>  {
-    debugger;
     switch(action.type) {
         case LOGIN_SUCCESS:
-            debugger;
             return Object.assign({}, state,  
            {
             isSuccess: action.isSuccess

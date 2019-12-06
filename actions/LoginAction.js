@@ -25,6 +25,7 @@ export const loginAction = (_data, pagePath, newPagepath) => {
                 //this.props.newJWT(response.data.jwt);;
                 dispatch(loginSuccess(true))
                 dispatch(loginPending(false));
+                alert(res.data.role)
                 debugger
                 if (res.data.role === "TravelerID") {
                     debugger;
@@ -37,7 +38,7 @@ export const loginAction = (_data, pagePath, newPagepath) => {
             }
         }).catch(err => {
            // debugger;
-            alert('some error')
+            alert(JSON.stringify(err))
             dispatch(loginError(err));
             console.log(err)
         })

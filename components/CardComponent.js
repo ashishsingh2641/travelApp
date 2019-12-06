@@ -7,7 +7,7 @@ class CardComponent extends Component {
             <>
             <View style={{width: 130, height: 130, marginLeft: 20, borderWidth: 0.5, borderColor: '#dddddd', elevation:1}}>
                 <View style={{flex: 2}}>
-                    <Image source={require('../assets/man.jpg')} 
+                    <Image source={this.props.addImage} 
                         style={{flex: 1, width: null, height: null, resizeMode: 'cover'}} />
                 </View>
                 <View style={{flex: 1, paddingLeft: 10, paddingTop: 10}}>

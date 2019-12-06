@@ -64,7 +64,6 @@ const WelcomeStyle = StyleSheet.create({
         alignSelf:'center',
         marginTop: 10,
         marginBottom: 10,
-        backgroundColor: '#E8EEEE',
         elevation: 5,
     },
     text: {

@@ -53,8 +53,7 @@ class Login extends Component {
                                     };
                                     this.props.loginAction(_data, AddProperty, Explore)
                                 }}
-                                validationSchema={validationSchema1}
-                               >
+                                validationSchema={validationSchema1}>
                                 {formikProps => (
                                     <React.Fragment>
                                         {/* <FormInput
@@ -92,6 +91,15 @@ class Login extends Component {
                                             value={formikProps.values.password} required={true} 
                                             validateText={formikProps.touched.password && formikProps.errors.password}
                                             />
+                                        <View>
+                                        <Text style={{color: 'blue', textAlign: 'right', marginRight: 20}}
+                                                onPress={() =>{
+                                                    const {navigate} = this.props.navigation;
+                                                    navigate("ForgotPassword")
+                                                }}>
+                                            Forgot your Password
+                                            </Text>
+                                        </View>
                                         {this.props.isPending === true ? (
                                          <ActivityIndicator />
                                          ) : (
