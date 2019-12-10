@@ -30,6 +30,8 @@ class  Explore extends Component {
     render() {
     return (
       <View>
+          <ScrollView
+            scrollEventThrottle={16}>
         <Picker 
             selectedValue={this.state.selectedItem}
             style={{ height: 50, width: "100%", border: 1, borderColor: "black" }}
@@ -54,17 +56,18 @@ class  Explore extends Component {
         <SearchBox />
         <View>
             {this.state.currentCitiesData.map((item) => {
+                console.log(item.imageUrl)
                 return (
-                    <View key={item.id}>
-                        <Text>{item.address1}</Text>
-                        <Text>{`'data:image/jpeg;base64,${item.imageUrl}`}</Text>
-                        <Image source={{uri: `'data:image/jpeg;base64,${item.imageUrl}`}} style={{ width: 300, height: 300 }} /> 
+                    <View key={item.id} style={{marginLeft: 20, marginRight: 20}}>
+                        <Text style={{fontSize: 20}}>{item.address1}</Text>
+                        <Text>{item.address2}</Text>
+                        <Text>{item.imageUrl}</Text>
+                        <Image source={{uri: `data:image/png;base64${item.imageUrl}`}} style={{ width: 300, height: 300 }} /> 
                     </View>
                 )
             })}
         </View>
-           {/* <ScrollView
-            scrollEventThrottle={16}>
+           
                <View style={styles.wrapper}>
                 <Text style={styles.username}>
                     What can we help you find ? username
@@ -100,7 +103,7 @@ class  Explore extends Component {
                 style={{position: 'absolute', right: 10, textAlign: 'center', elevation: 5,
                     width: 50, height: 50, bottom: 150, zIndex: 999, borderRadius: 50,
                     fontSize: 35, backgroundColor: '#2c3e50', color: 'white'}}>+</Text>
-            </View> */}
+            </View>
       </View>
     );
   }

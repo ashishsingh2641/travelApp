@@ -7,7 +7,7 @@ import Button from '../components/Button';
 import { Formik } from 'formik';
 import ImagePicker from 'react-native-image-picker';
 import { validateProperty } from './utils/AddPropertyValidation';
-import Axios from 'axios';
+
 const __cities = states;
 var array = states;
 var seenNames = {};
@@ -28,7 +28,8 @@ class AddProperty extends Component {
             states: [],
             cities: [],
             selectedCities: '',
-            photo: null
+            photo: null,
+            imageUrl: ''
         }
     }
     componentDidMount() {
@@ -38,16 +39,27 @@ class AddProperty extends Component {
     }
     handleChoosePhoto = () => {
         const options = {
-            noData: true,
+            title: 'Please upload your image',
+            storageOptions: {
+                skipBackup: true,
+                path: 'images',
+            },
         }
-        ImagePicker.launchImageLibrary(options, response => {
-            alert(JSON.stringify(response.path))
+        ImagePicker.showImagePicker(options, response => {
             console.log(response)
-            if (response.uri) {
-                this.setState({ photo: response })
+            if (response.didCancel) {
+            } else {
+                let source = { uri: response.uri };
+                let data = {
+                    uri: source,
+                    imagestring: response.data
+                };
+                this.setState({
+                    photo: data.uri,
+                    imageUrl: data.imagestring
+                })
             }
         });
-
     }
     render() {
         const { photo } = this.state;
@@ -69,38 +81,34 @@ class AddProperty extends Component {
 
                     }}
                         onSubmit={(values) => {
-                            const data = {
-                                address1: values.AddressLine1,
-                                address2: values.AddressLine2,
-                                city: this.state.selectedCities,
-                                state: this.state.selectedState,
-                                pinCode: values.pincode,
-                                imageUrl: this.state.photo.uri,
-                                landmark: '',
-                                typeOfProperty: '',
-                                ownerMobileNumber: '',
-                                ownerName: ''
+                            debugger;
+                           
+                            const appconfig = {
+                                headers: {
+                                    "Access-Control-Allow-Origin": "*",
+                                    'Content-Type': 'application/json; charset=UTF-8'
+                                }
                             }
-                            console.log(this.state.photo.uri);
                             axios.post('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/addProperty', {
                                 address1: values.address1,
                                 address2: values.address2,
                                 city: this.state.selectedCities,
                                 state: this.state.selectedState,
                                 pinCode: values.pinCode,
-                                imageUrl: this.state.photo.uri,
+                                imageUrl: JSON.stringify(this.state.imageUrl),
                                 landmark: values.landmark,
                                 typeOfProperty: '',
                                 ownerMobileNumber: '',
                                 isAvailable: '',
                                 ownerName: ''
-                            }).then(res => {
-                                alert(JSON.stringify(res))
+                            },appconfig).then(res => {
+                                debugger;
+                                alert("Upload successfull")
                                 if (res.status === 200) {
-                                    this.props.navigation.navigate("Explore")
+                                    this.props.navigation.navigate("Explore");
+                                    this.setState({ photo: null });
                                 }
-                            })
-                                .catch(err => alert(JSON.stringify(err)))
+                            }).catch(err => console.log(JSON.stringify(err)))
                         }}
                         validationSchema={validateProperty}>
                         {formikProps => (
@@ -198,7 +206,7 @@ class AddProperty extends Component {
                                     {photo && (
                                         <Image
                                             source={{ uri: photo.uri }}
-                                            style={{ width: 300, height: 300 }}
+                                            style={{ width: "100%", height: 300 }}
                                         />
                                     )}
                                     <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />
@@ -212,16 +220,5 @@ class AddProperty extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    ColoredText: {
-        fontSize: 20,
-        color: '#2c3e50',
-        fontWeight: 'normal',
-        fontFamily: "'Roboto', sans-serif",
-        textAlign: 'left',
-        marginBottom: 40
-    },
-})
 
 export default AddProperty;
