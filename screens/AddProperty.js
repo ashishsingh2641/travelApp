@@ -78,11 +78,10 @@ class AddProperty extends Component {
                         typeOfProperty: '',
                         ownerMobileNumber: '',
                         ownerName: ''
-
                     }}
                         onSubmit={(values) => {
                             debugger;
-                           
+
                             const appconfig = {
                                 headers: {
                                     "Access-Control-Allow-Origin": "*",
@@ -101,8 +100,7 @@ class AddProperty extends Component {
                                 ownerMobileNumber: '',
                                 isAvailable: '',
                                 ownerName: ''
-                            },appconfig).then(res => {
-                                debugger;
+                            }, appconfig).then(res => {
                                 alert("Upload successfull")
                                 if (res.status === 200) {
                                     this.props.navigation.navigate("Explore");

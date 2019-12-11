@@ -11,6 +11,7 @@ const FormInput = (props) => {
             <Text style={{ marginTop: 10, marginBottom: 10 , fontSize: 15,}}>{formFieldLabel}
             {required === true ? <Text style={{color: 'red'}}>*</Text> : <Text /> }</Text>
             <TextInput
+                selectionColor={'black'}
                 multipleLine={props.multipleLine}
                 secureTextEntry={props.secureTextEntry}
                 onTouchStart={handleTouchStart}
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
         width: '90%',
         justifyContent:'center',
         alignSelf:'center',
+        backgroundColor: "white"
     },
     formContainer2: {
         width: '90%',

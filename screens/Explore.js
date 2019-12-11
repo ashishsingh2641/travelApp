@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, ScrollView, View, Text,Platform, StatusBar, Picker} from 'react-native';
+import {Image, StyleSheet, ScrollView, View, Text,Platform, StatusBar, Picker, Dimensions} from 'react-native';
+// import {Spinner} from 'native-base';
 import CardComponent from '../components/CardComponent';
 import SearchBox from '../components/SearchBox';
 import Recmonded from '../components/Recmonded';
+import Spinner from 'react-native-loading-spinner-overlay';
 import axios from 'axios';
 //import { Container, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
 
+var { width, height } = Dimensions.get('window');
 
 class  Explore extends Component {
     constructor(props) {
@@ -13,7 +16,9 @@ class  Explore extends Component {
         this.state = {
             selectedItem: '',
             cities: [],
-            currentCitiesData: []
+            currentCitiesData: [],
+            isLoading: false,
+            spinner: false
         }
     }
     UNSAFE_componentWillMount() {
@@ -24,24 +29,35 @@ class  Explore extends Component {
     }
     componentDidMount() {
         axios.get('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllCity')
-        .then(res => this.setState({cities: res.data}))
+        .then(res =>this.setState({
+                cities: res.data,
+                spinner: true},() => {
+            axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${res.data[0]}`)
+            .then(newRes => this.setState({
+                currentCitiesData: newRes.data,
+                spinner: false
+            }))
+            .catch(err => console.log(err))
+        }))
         .catch(err => alert(JSON.stringify(err)))
     }
     render() {
     return (
-      <View>
+      <View style={{flex: 1, position: 'relative',}}>
           <ScrollView
             scrollEventThrottle={16}>
         <Picker 
             selectedValue={this.state.selectedItem}
             style={{ height: 50, width: "100%", border: 1, borderColor: "black" }}
             onValueChange={(itemValue, itemIndex) => {
-                this.setState({ selectedItem: itemValue }, ()=> {
+                this.setState({ selectedItem: itemValue,
+                    }, ()=> {
+
                     axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${itemValue}`)
                     .then(res => {
                         if (res !== undefined) {
                             this.setState({
-                                currentCitiesData: res.data
+                                currentCitiesData: res.data,
                             })
                         }
                     })
@@ -55,17 +71,26 @@ class  Explore extends Component {
             </Picker>
         <SearchBox />
         <View>
-            {this.state.currentCitiesData.map((item) => {
-                console.log(item.imageUrl)
+            {this.state.currentCitiesData.length <= 0 ? 
+                <View >
+                    <Spinner  
+                        visible={this.state.spinner}
+                        textContent={'Loading your items...'} />
+                </View> 
+                : 
+                <>
+                    {this.state.currentCitiesData.map((item) => {
+                const imageURL = `data:image/png;base64,${item.imageUrl}`
                 return (
-                    <View key={item.id} style={{marginLeft: 20, marginRight: 20}}>
-                        <Text style={{fontSize: 20}}>{item.address1}</Text>
-                        <Text>{item.address2}</Text>
-                        <Text>{item.imageUrl}</Text>
-                        <Image source={{uri: `data:image/png;base64${item.imageUrl}`}} style={{ width: 300, height: 300 }} /> 
-                    </View>
-                )
-            })}
+                        <View key={item.id} style={{marginLeft: 20, marginRight: 20}}>
+                            <Text style={{fontSize: 20}}>{item.address1}</Text>
+                            <Text>{item.address2}</Text>
+                            <Image source={{uri: imageURL}} style={{ width: "100%", height: 300 }} /> 
+                        </View>
+                        )
+                    })}
+                </>
+            }
         </View>
            
                <View style={styles.wrapper}>
@@ -73,7 +98,7 @@ class  Explore extends Component {
                     What can we help you find ? username
                 </Text>
                </View>
-               <View style={{ height: 130, marginTop: 20}}>
+               {/* <View style={{ height: 130, marginTop: 20}}>
                    <ScrollView horizontal={true}
                    showsHorizontalScrollIndicator={false}>
                         <CardComponent addImage={require('../assets/hotel1.jpg')} />
@@ -90,7 +115,7 @@ class  Explore extends Component {
                     <Recmonded imagrUri={require('../assets/hotel2.jpg')}/>
                     <Recmonded imagrUri={require('../assets/hotel3.jpg')}/>
                     <Recmonded imagrUri={require('../assets/Hotel4.jpg')}/>
-                </View>
+                </View> */}
            </ScrollView>
            <View 
             style={{
@@ -101,7 +126,7 @@ class  Explore extends Component {
                 }}>
                 <Text onPress={() => this.props.navigation.navigate("Login")} 
                 style={{position: 'absolute', right: 10, textAlign: 'center', elevation: 5,
-                    width: 50, height: 50, bottom: 150, zIndex: 999, borderRadius: 50,
+                    width: 50, height: 50, bottom: 50, zIndex: 999, borderRadius: 50,
                     fontSize: 35, backgroundColor: '#2c3e50', color: 'white'}}>+</Text>
             </View>
       </View>
