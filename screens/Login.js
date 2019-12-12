@@ -8,6 +8,7 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import LoginStyle from '../theme/LoginStyle';
 import {loginAction} from '../actions/LoginAction';
+import LinearGradient from 'react-native-linear-gradient';
 
 const validationSchema1 = yup.object().shape({
     password: yup
@@ -31,7 +32,10 @@ class Login extends Component {
         return (
             <>
                 <ScrollView>
+               
                     <View style={styles.container}>
+                    <LinearGradient start={{ x: 1, y: 1 }} end={{ x: 0, y: 1 }}
+                    colors={['#2c3e50', '#5691c8']} style={{ zIndex: 0}}>
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>
                                 <Text style={styles.ColoredText}> Login.
@@ -69,24 +73,27 @@ class Login extends Component {
                                             validateText={formikProps.touched.email && formikProps.errors.email}
                                             /> */}
                                         <FormInput
-                                            style={{borderWidth: 1, 
-                                            borderColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'grey' }}
+                                            color={'white'}
+                                            style={{borderBottomWidth: 2, color: 'white', 
+                                            borderBottomColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'white' }}
                                             formFieldLabel="Phone Number"
                                             placeHolderText="+91 XXXXXXXXXX"
                                             handleChange={formikProps.handleChange('phnNumber')}
                                             onBlur={formikProps.handleBlur('phnNumber')}
                                             value={formikProps.values.phnNumber}
                                             required={true} 
+                                            placeholderTextColor="white"
                                             autoFocus
                                             validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, 
-                                            borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'grey' }}
+                                            style={{ borderBottomWidth: 2, color: 'white',
+                                            borderBottomColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'white' }}
                                             formFieldLabel="Password"
                                             secureTextEntry={false}
                                             onBlur={formikProps.handleBlur('password')}
                                             placeHolderText="Please enter password"
+                                            placeholderTextColor="white"
                                             handleChange={formikProps.handleChange('password')}
                                             value={formikProps.values.password} required={true} 
                                             validateText={formikProps.touched.password && formikProps.errors.password}
@@ -117,6 +124,8 @@ class Login extends Component {
                             }}>or login with</Text>
                             <SocialShare />
                         </View>
+                        
+                    </LinearGradient>
                     </View>
                 </ScrollView>
             </>

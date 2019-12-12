@@ -26,26 +26,26 @@ const WelcomeStyle = StyleSheet.create({
     linearGradient: {
         paddingLeft: 15,
         paddingRight: 15,
-        width: "95%",
+        elevation: 5,
+        width: "90%",
         alignSelf:'center',
         marginTop: 20,
-        elevation: 5,
+        elevation: 2,
         zIndex: 3,
-        paddingTop: 10,
-        paddingBottom: 10
+        borderRadius: 4
       },
       linearGradient1: {
         paddingLeft: 15,
         paddingRight: 15,
-        paddingTop: 10,
-        paddingBottom: 10,
-        width: "95%",
+        width: "90%",
         alignSelf:'center',
         marginTop: 10,
         marginBottom: 10,
-        elevation: 5,
+        elevation: 2,
         zIndex: 3,
-        marginTop: 20
+        elevation: 5,
+        marginTop: 20,
+        borderRadius: 4
       },
       buttonText: {
         fontSize: 18,

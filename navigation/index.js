@@ -9,6 +9,7 @@ import Explore from '../screens/Explore';
 import Role from '../screens/Role';
 import AddProperty from '../screens/AddProperty';
 import ForgotPassword from '../screens/ForgotPassword';
+import TabViewComponent from '../screens/TabViewComponent';
 import { createAppContainer } from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -49,6 +50,7 @@ const ExploreScreen = createStackNavigator({
     Explore: { screen: Explore },
     Login: {screen: Login},
     AddProperty: {screen: AddProperty},
+    TabViewComponent: {screen: TabViewComponent},
     ForgotPassword: {screen: ForgotPassword}
   });
   
@@ -59,6 +61,7 @@ const ExploreScreen = createStackNavigator({
     },
     SprSignUp: { screen: SprSignUp },
     Login: {screen: Login},
+    TabViewComponent: {screen: TabViewComponent},
     Explore: {screen: Explore},
     AddProperty: {screen: AddProperty},
     ForgotPassword: {screen: ForgotPassword}

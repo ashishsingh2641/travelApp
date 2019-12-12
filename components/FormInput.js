@@ -8,9 +8,10 @@ const FormInput = (props) => {
         onBlur, autoFocus} = props;
     return (
         <View style={formFieldLabel === 'password' || formFieldLabel === "Password"? styles.formContainer2 : styles.formContainer1}>
-            <Text style={{ marginTop: 10, marginBottom: 10 , fontSize: 15,}}>{formFieldLabel}
+            <Text style={{ marginTop: 10, marginBottom: 10 , fontSize: 15,color: props.color || 'black'}}>{formFieldLabel}
             {required === true ? <Text style={{color: 'red'}}>*</Text> : <Text /> }</Text>
             <TextInput
+                {...props}
                 selectionColor={'black'}
                 multipleLine={props.multipleLine}
                 secureTextEntry={props.secureTextEntry}
@@ -38,7 +39,6 @@ const styles = StyleSheet.create({
         width: '90%',
         justifyContent:'center',
         alignSelf:'center',
-        backgroundColor: "white"
     },
     formContainer2: {
         width: '90%',

@@ -6,7 +6,7 @@ class SearchBox extends Component {
     render() {
         return (
             <View style={styles.SearchLayout}>
-                <Item style={{ width: '90%',
+                <Item style={{ width: '100%',
                       marginHorizontal: 10,
                       elevation: 1,
                       marginTop: 10
@@ -14,6 +14,7 @@ class SearchBox extends Component {
                     <Icon name="search" style= {{color: '#2c3e50',
                   marginHorizontal: 10}}/>
                     <Input placeholder="Search" 
+                    onSubmitEditing={this.props.onSubmitEditing}
                     placeholderTextColor = "grey"
                     underlineColorAndroid="transparent"
                     onChangeText={this.props.handleChange}
@@ -23,7 +24,6 @@ class SearchBox extends Component {
                         fontWeight: 'bold',
                     }} />
                 </Item>
-                <Icon name="bookmark" style={styles.bookmarks}/>
             </View>
         )
     }

@@ -50,11 +50,15 @@ const Role = (props) => {
                             setFlag(true)
                             setTimeout(()=>{
                                 props.navigation.navigate("SprSignUp", {role: TravelerID})
+                                setFlag(false)
+                                setTravelId('')
                             }, 4000) 
                         })() : HostID !== ''?  (() => {
                             setFlag(true);
                             setTimeout(()=>{
-                                props.navigation.navigate("Login", {role: HostID});
+                                props.navigation.navigate("SprSignUp", {role: HostID});
+                                setFlag(false);
+                                setHostId('')
                             }, 4000);
                         })(): (() => {
                             alert("please Select your Role");
