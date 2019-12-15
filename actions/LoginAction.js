@@ -1,4 +1,5 @@
 import axios from 'axios';
+const jwtDecode = require('jwt-decode');
 import Auth from '../auth/auth';
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_PENDING = "LOGIN_PENDING";
@@ -11,21 +12,26 @@ export const loginAction = (_data, pagePath, newPagepath) => {
         dispatch(loginPending(true));
         dispatch(loginSuccess(false));
         dispatch(loginError(null));
-       // Auth.saveItem("role", _data['role'])
-        axios.post('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/user/login', {
+       // Auth.saveItem("role", _data['role']);
+
+       //axios.get("https://localhost:5000/api/user/getAllUsers").then(res => alert(JSON.stringify(res))).catch(err => console.log(err))
+        axios.post('http://192.168.0.104:5000/api/user/login', {
             // role: _data.role,
             // firstName: _data.firstName,
             // lastName: _data.lastName,
             // email: _data.email,
             password: _data.password,
-            phnNumber: _data.phnNumber
+            email: _data.email
         }).then(res => {
             if(res !== undefined){
                 //Auth.saveKey("id_token", response.data.jwt);
                 //this.props.newJWT(response.data.jwt);;
+                //console.log(res, ":::::::::::::")
                 dispatch(loginSuccess(true))
                 dispatch(loginPending(false));
-                alert(res.data.role)
+                //alert(res.data.role)
+                let decoded = jwtDecode(res.data);
+                    console.log(decoded, ":::::::::::::::::");
                 debugger
                 if (res.data.role === "TravelerID") {
                     debugger;

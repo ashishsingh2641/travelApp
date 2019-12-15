@@ -46,6 +46,10 @@ target 'travelapp' do
 
   pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
 
+  pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'travelappTests' do
     inherit! :search_paths
     # Pods for testing

@@ -16,6 +16,8 @@ import com.travelapp.R;
 
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-image-crop-picker
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
 // react-native-image-picker
 import com.imagepicker.ImagePickerPackage;
 // react-native-linear-gradient
@@ -24,6 +26,8 @@ import com.BV.LinearGradient.LinearGradientPackage;
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -72,10 +76,12 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new RNGestureHandlerPackage(),
+      new PickerPackage(),
       new ImagePickerPackage(),
       new LinearGradientPackage(),
       new ReanimatedPackage(),
       new RNScreensPackage(),
+      new SvgPackage(),
       new VectorIconsPackage()
     ));
   }

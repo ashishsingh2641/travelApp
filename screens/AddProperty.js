@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, Picker, StyleSheet, Image } from 'react-native';
+import { View, Text, ScrollView, Picker, StyleSheet, Image, Dimensions } from 'react-native';
 import axios from 'axios';
 import states from '../modal/cities.json';
 import FormInput from '../components/FormInput';
 import Button from '../components/Button';
 import { Formik } from 'formik';
-import ImagePicker from 'react-native-image-picker';
+import Recmonded from '../components/Recmonded';
+//import ImagePicker from 'react-native-image-picker';
+import ImagePicker from 'react-native-image-crop-picker';
 import { validateProperty } from './utils/AddPropertyValidation';
+import Spinner from 'react-native-loading-spinner-overlay';
+
+const width = Dimensions.get('window').width;
 
 const __cities = states;
 var array = states;
@@ -28,8 +33,9 @@ class AddProperty extends Component {
             states: [],
             cities: [],
             selectedCities: '',
-            photo: null,
-            imageUrl: ''
+            imageUrl: [],
+            spinner: false,
+            textContent: 'Loading your items...'
         }
     }
     componentDidMount() {
@@ -37,29 +43,25 @@ class AddProperty extends Component {
             states: [...array]
         });
     }
-    handleChoosePhoto = () => {
-        const options = {
-            title: 'Please upload your image',
-            storageOptions: {
-                skipBackup: true,
-                path: 'images',
-            },
-        }
-        ImagePicker.showImagePicker(options, response => {
-            console.log(response)
-            if (response.didCancel) {
-            } else {
-                let source = { uri: response.uri };
-                let data = {
-                    uri: source,
-                    imagestring: response.data
-                };
-                this.setState({
-                    photo: data.uri,
-                    imageUrl: data.imagestring
-                })
-            }
-        });
+    handleChoosePhoto = (event) => {
+        ImagePicker.openPicker({
+            width: width-20,
+            height: 200,
+            cropping: true,
+            multiple: true,
+            includeBase64: true,
+            compressImageQuality: 0
+          }).then(image => {
+              const imageData = [];
+              imageData.push(image);
+                if (image.length <= 3) {
+                    this.setState({imageUrl: image});
+                }
+                else {
+                    event.preventDefault();
+                    alert("You show not select more then 3 images")
+                }
+          });
     }
     render() {
         const { photo } = this.state;
@@ -80,8 +82,10 @@ class AddProperty extends Component {
                         ownerName: ''
                     }}
                         onSubmit={(values) => {
-                            debugger;
-
+                            this.setState({
+                                spinner: true,
+                                textContent: 'Redirecting you to explore page....'
+                            })
                             const appconfig = {
                                 headers: {
                                     "Access-Control-Allow-Origin": "*",
@@ -103,8 +107,11 @@ class AddProperty extends Component {
                             }, appconfig).then(res => {
                                 alert("Upload successfull")
                                 if (res.status === 200) {
+                                    this.setState({
+                                        spinner: false
+                                    })
                                     this.props.navigation.navigate("Explore");
-                                    this.setState({ photo: null });
+                                    this.setState({ imageUrl: [] });
                                 }
                             }).catch(err => console.log(JSON.stringify(err)))
                         }}
@@ -190,7 +197,7 @@ class AddProperty extends Component {
                                 </View>
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,
+                                        borderWidth: 1, fontSize: 20, marginBottom: 40,
                                         borderColor: formikProps.touched.pinCode && formikProps.errors.pinCode ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="Pincode"
@@ -201,14 +208,26 @@ class AddProperty extends Component {
                                     validateText={formikProps.touched.pinCode && formikProps.errors.pinCode}
                                 />
                                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                    {photo && (
-                                        <Image
-                                            source={{ uri: photo.uri }}
-                                            style={{ width: "100%", height: 300 }}
-                                        />
-                                    )}
-                                    <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />
+                                    {this.state.imageUrl <= 0 ? 
+                                            <Text>{"please uplaod images"}</Text>
+                                            :
+                                            <>
+                                                <Text style={{textAlign: 'left'}}>uploded images</Text>
+                                                {this.state.imageUrl.map((item) => {
+                                                   return (
+                                                        <View key={Math.random()}>
+                                                             <Recmonded imagrUri={`data:${item.mime};base64,${item.data}`} />
+                                                        </View>
+                                                   )
+                                                })}
+                                            </>
+                                        }
+                                    {this.state.imageUrl.length > 0 ? <Text /> : <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />}
                                 </View>
+                                <Spinner
+                                    textStyle={{ color: "white" }}
+                                    visible={this.state.spinner}
+                                    textContent={this.state.textContent} />
                                 <Button label="Addproperty" buttonAction={formikProps.handleSubmit} />
                             </>
                         )}

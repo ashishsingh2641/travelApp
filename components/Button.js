@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginBottom: 10,
         elevation: 4,
+        borderRadius: 4,
         zIndex: 3
     },
     buttonText: {

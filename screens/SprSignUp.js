@@ -131,7 +131,6 @@ class SprSignUp extends Component {
                                             autoFocus
                                             validateText={formikProps.touched.email && formikProps.errors.email}
                                             />
-
                                         <FormInput
                                             style={{ borderWidth: 1,  fontSize: 20,
                                             borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : '#2c3e50' }}
@@ -161,25 +160,8 @@ class SprSignUp extends Component {
                                             value={formikProps.values.phnNumber} required={true} 
                                             validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
                                             />
-                                        
                                         <View>
-                                        {/* {checkProperty.map((item) => {
-                                            return (
-                                                <React.Fragment key={item}>
-                                                    <Check label={item} />
-                                                </React.Fragment>
-                                            )
-                                        })} */}
                                         </View>
-                                           {/* <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                                {photo && (
-                                                <Image
-                                                    source={{ uri: photo.uri }}
-                                                    style={{ width: 300, height: 300 }}
-                                                />
-                                                )}
-                                                <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />
-                                            </View> */}
                                         {this.props.isPending === true ? (
                                          <ActivityIndicator />
                                          ) : (

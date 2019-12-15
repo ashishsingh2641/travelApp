@@ -20,6 +20,7 @@ export const Signup = (_data, pagePath) => {
             password: _data.password,
             phnNumber: _data.phnNumber
         }).then(res => {
+            console.log(res, "::::::::::::::");
             if(res !== undefined){
                 //Auth.saveKey("id_token", res.data.jwt);
                 dispatch(signUpSuccess(true))
@@ -29,7 +30,13 @@ export const Signup = (_data, pagePath) => {
         }).catch(err => {
             debugger;
             dispatch(signUpError(err));
-            console.log(err)
+                if(err.response.status === 403) {
+                    alert(err.response.headers.user.replace(/^"(.*)"$/, '$1'));
+                    dispatch(signUpPending(false));
+                }else if(err.response.status === 500) {
+                    alert('there is some issue with the network.....');
+                    dispatch(signUpPending(false));
+                }
         })
     }
 }

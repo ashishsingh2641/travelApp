@@ -3,7 +3,7 @@ import React from 'react';
 import {
     View, Text, Image,
     ScrollView, StatusBar, TouchableOpacity,
-    RefreshControl, SafeAreaView
+    RefreshControl, SafeAreaView, Button
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import PageLoader from './PageLoader';
@@ -15,7 +15,7 @@ class Welcome extends React.Component {
         super(props);
         this.state = {
             isFetching: false,
-            refreshing: false
+            refreshing: false,
         }
     }
     componentDidMount() {
@@ -104,12 +104,12 @@ class Welcome extends React.Component {
                         }
                     </ScrollView>
                 </SafeAreaView>
+        
             </>
         )
     }
 }
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         state
     }

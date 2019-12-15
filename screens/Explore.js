@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, ScrollView, View, Text, Platform, StatusBar, Picker } from 'react-native';
+import { Image, StyleSheet, ScrollView, View, Text, Platform, StatusBar, Picker , TouchableOpacity, Alert} from 'react-native';
 // import {Spinner} from 'native-base';
 import CardComponent from '../components/CardComponent';
 import SearchBox from '../components/SearchBox';
 import Recmonded from '../components/Recmonded';
 import Spinner from 'react-native-loading-spinner-overlay';
 import axios from 'axios';
-import TabViewComponent from './TabViewComponent';
-//import { Container, Content, Card, CardItem, Thumbnail, Button, Icon, Left, Body, Right } from 'native-base';
-
+import Icons from 'react-native-vector-icons/AntDesign';
 
 class Explore extends Component {
     constructor(props) {
@@ -19,7 +17,10 @@ class Explore extends Component {
             currentCitiesData: [],
             isLoading: false,
             spinner: false,
-            value: ''
+            value: '',
+            modalVisible: false,
+            flag: false,
+            textContent: ''
         }
     }
     UNSAFE_componentWillMount() {
@@ -43,6 +44,10 @@ class Explore extends Component {
             }))
             .catch(err => alert(JSON.stringify(err)))
     }
+    setModalVisible(visible) {
+        this.setState({modalVisible: visible});
+    }
+    
     render() {
         return (
             <View style={{ flex: 1, position: 'relative', }}>
@@ -55,7 +60,6 @@ class Explore extends Component {
                             this.setState({
                                 selectedItem: itemValue,
                             }, () => {
-
                                 axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${itemValue}`)
                                     .then(res => {
                                         if (res !== undefined) {
@@ -76,17 +80,31 @@ class Explore extends Component {
                         value: value
                     })}
                     onSubmitEditing={ () => {
-                        const value = this.state.value;
-                        const cities = [];
+                        if(this.state.value !== '') {
+                            const value = this.state.value;
+                            const cities = [];
                             this.state.currentCitiesData.filter(function(item) {
                             return item.address2.toLowerCase() === value.toLowerCase();
                             }).map(function ({ address1, address2, imageUrl  }) {
                                 cities.push({address1, address2, imageUrl})
                             });
-                            console.log(cities);
                             this.setState({
                                 currentCitiesData: cities
                             })
+                        } else {
+                            this.setState({
+                                spinner: true
+                            })
+                            axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${this.state.selectedItem}`)
+                                    .then(res => {
+                                        if (res !== undefined) {
+                                            this.setState({
+                                                spinner: false,
+                                                currentCitiesData: res.data,
+                                            })
+                                        }
+                                })
+                        }
                     }}/>
                     <View>
                         {this.state.currentCitiesData.length <= 0 ?
@@ -99,43 +117,83 @@ class Explore extends Component {
                             :
                             <>
                                 {this.state.currentCitiesData.map((item) => {
-                                    const imageURL = `data:image/png;base64,${item.imageUrl}`
+                                    //const imageURL = JSON.parse(item.imageUrl);
+                                    const arr = []; 
+                                    let imgData = ''
+                                    const data = JSON.parse(item.imageUrl).map((newItem) => {
+                                    imgData = `data:${newItem.mime};base64,${newItem.data}`;
+                                    arr.push(imgData)
+                                    })
                                     return (
-                                        <View key={item.id} style={{ marginLeft: 20, marginRight: 20 }}>
-                                            <Text style={{ fontSize: 20 }}>{item.address1}</Text>
-                                            <Text>{item.address2}</Text>
-                                            <Image source={{ uri: imageURL }} style={{ width: "100%", height: 300 }} />
+                                        <View key={item.id} style={{ marginLeft: 20, marginRight: 20, marginBottom: 15, marginTop: 15 }}>
+                                            <Text style={{ fontSize: 20, fontWeight: "bold", textTransform: "uppercase" }}>{item.address1}</Text>
+                                            <View style={{flex: 1, flexDirection: 'row', marginBottom: 10, marginTop: 10,}}>
+                                                <View style={{flex: 1}}>
+                                                    <Text>{item.address2}</Text>
+                                                </View>
+                                                <View style={{flex: 1}}>
+                                                <TouchableOpacity style={{textAlign: 'right'}}
+                                                    onPress={() => this.setState({flag: true, textContent: 'your booking is confirmed...'}, () => {
+                                                        setTimeout(()=> {
+                                                            this.setState({textContent: 'redirecting you to dashboard...', });
+                                                            this.props.navigation.navigate("Welcome");
+                                                            this.setState({flag: false, });
+                                                        }, 3000)
+                                                    })}>
+                                                <Icons name={"save"}  size={30} color="#01a699" style={{textAlign: 'right'}}/>
+                                                </TouchableOpacity>
+                                                </View>
+                                            </View>
+                                            <View style={{display: 'flex', flexDirection: 'row'}}>
+                     
+                                               
+                                                    {JSON.parse(item.imageUrl).length === 1 ? 
+                                                             <Image source={{uri: `data:${JSON.parse(item.imageUrl)[0].mime};base64,${JSON.parse(item.imageUrl)[0].data}`}} 
+                                                                 style={{width: "100%", height: 200, resizeMode:'cover', zIndex: 9999}}  />
+                                                         : 
+                                                        (
+                                                        <>
+                                                        {JSON.parse(item.imageUrl).length === 2 ? 
+                                                        <>
+                                                            <Image source={{uri: `data:${JSON.parse(item.imageUrl)[0].mime};base64,${JSON.parse(item.imageUrl)[0].data}`}} 
+                                                            style={{width: "50%", height: 200, marginRight: 5}}/>
+                                                            <Image source={{uri: `data:${JSON.parse(item.imageUrl)[1].mime};base64,${JSON.parse(item.imageUrl)[1].data}`}} 
+                                                            style={{width: "50%", height: 200}}/>
+                                                        </>
+                                                        
+                                                        :<>
+                                                            <View style={{width: "50%"}}>
+                                                               <Image source={{uri: `data:${JSON.parse(item.imageUrl)[0].mime};base64,${JSON.parse(item.imageUrl)[0].data}`}} 
+                                                            style={{width: "100%", height: 200}}/> 
+                                                               
+                                                            </View>
+                                                            <View style={{width: "50%", flex: 2, flexDirection: 'column', backgroundColor: 'rgba(0,0,0,.4)'}}>
+                                                                <View style={{marginBottom: 5}}>
+                                                                <Image source={{uri: `data:${JSON.parse(item.imageUrl)[1].mime};base64,${JSON.parse(item.imageUrl)[1].data}`}} 
+                                                            style={{width: "100%", height: 90 }}/> 
+                                                                </View>
+                                                                <View style={{marginTop: 5}}>
+                                                                <Image source={{uri: `data:${JSON.parse(item.imageUrl)[2].mime};base64,${JSON.parse(item.imageUrl)[2].data}`}} 
+                                                                   style={{width: "100%", height: 100}}/>
+                                                                </View>
+                                                            </View>
+                                                            </>
+                                                        }
+                                                        </>
+                                                        )
+                                                    }
+                                                    
+                                            </View>
                                         </View>
                                     )
                                 })}
                             </>
                         }
+                        
                     </View>
 
-                    <View style={styles.wrapper}>
-                        <Text style={styles.username}>
-                        What can we help you find ? username
-                </Text>
+                    
                 
-                    </View>
-                    {/* <View style={{ height: 130, marginTop: 20}}>
-                   <ScrollView horizontal={true}
-                   showsHorizontalScrollIndicator={false}>
-                        <CardComponent addImage={require('../assets/hotel1.jpg')} />
-                        <CardComponent addImage={require('../assets/hotel2.jpg')} />
-                        <CardComponent addImage={require('../assets/hotel3.jpg')} />
-                        <CardComponent addImage={require('../assets/Hotel4.jpg')} />
-                    </ScrollView>
-            </View>
-                <View style={{flex: 1, height: '100%', marginBottom: 150}}>
-                    <Recmonded imagrUri={require('../assets/man.jpg')}
-                    HandleRoute={() => {this.props.navigation.navigate("Signup")}}/>
-                    <Recmonded HandleRoute={() => {this.props.navigation.navigate("Signup")}}
-                    imagrUri={require('../assets/hotel1.jpg')}/>
-                    <Recmonded imagrUri={require('../assets/hotel2.jpg')}/>
-                    <Recmonded imagrUri={require('../assets/hotel3.jpg')}/>
-                    <Recmonded imagrUri={require('../assets/Hotel4.jpg')}/>
-                </View> */}
                 </ScrollView>
                 <View
                     style={{
@@ -151,6 +209,13 @@ class Explore extends Component {
                             fontSize: 35, backgroundColor: '#2c3e50', color: 'white'
                         }}>+</Text>
                 </View>
+                {this.state.flag === true ? 
+                 <Spinner
+                    textStyle={{ color: "white", paddingLeft: 50, paddingRight: 50 }}
+                    visible={this.state.flag}
+                    textContent={this.state.textContent} />
+                    
+        : <Text />}
             </View>
         );
     }

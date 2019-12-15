@@ -11,6 +11,11 @@ import {loginAction} from '../actions/LoginAction';
 import LinearGradient from 'react-native-linear-gradient';
 
 const validationSchema1 = yup.object().shape({
+    email: yup
+    .string()
+    .label('Email')
+    .email()
+    .required(),
     password: yup
         .string()
         .label('Password')
@@ -60,9 +65,10 @@ class Login extends Component {
                                 validationSchema={validationSchema1}>
                                 {formikProps => (
                                     <React.Fragment>
-                                        {/* <FormInput
-                                            style={{ borderWidth: 1, 
-                                            borderColor: formikProps.touched.email && formikProps.errors.email ? 'red' : 'grey' }}
+                                        <FormInput
+                                        color={'white'}
+                                            style={{ borderBottomWidth: 1, color: "white",
+                                            borderBottomColor: formikProps.touched.email && formikProps.errors.email ? 'red' : 'white' }}
                                             formFieldLabel="Email"
                                             placeHolderText="mikysingh1986@gmail.com"
                                             handleChange={formikProps.handleChange('email')}
@@ -71,8 +77,8 @@ class Login extends Component {
                                             required={true} 
                                             autoFocus
                                             validateText={formikProps.touched.email && formikProps.errors.email}
-                                            /> */}
-                                        <FormInput
+                                            />
+                                        {/* <FormInput
                                             color={'white'}
                                             style={{borderBottomWidth: 2, color: 'white', 
                                             borderBottomColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'white' }}
@@ -85,7 +91,7 @@ class Login extends Component {
                                             placeholderTextColor="white"
                                             autoFocus
                                             validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
-                                            />
+                                            /> */}
                                         <FormInput
                                             style={{ borderBottomWidth: 2, color: 'white',
                                             borderBottomColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'white' }}

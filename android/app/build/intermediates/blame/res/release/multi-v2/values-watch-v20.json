@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\TCTSIT\\Desktop\\app\\travelApp\\android\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TCTSIT\\.gradle\\caches\\transforms-2\\files-2.1\\9ca40e431e44b582b0edf60ae55b937d\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",
