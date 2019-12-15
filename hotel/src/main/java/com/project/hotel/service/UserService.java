@@ -7,5 +7,5 @@ import com.project.hotel.entity.User;
 
 public interface UserService {
 	public ResponseEntity<User> userRegister(@RequestBody User user);
-	public ResponseEntity<User> userLogin( @RequestBody User user);
+	public ResponseEntity<String> userLogin( @RequestBody User user);
 }

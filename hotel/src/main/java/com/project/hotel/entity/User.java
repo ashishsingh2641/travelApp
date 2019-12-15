@@ -1,9 +1,7 @@
 package com.project.hotel.entity;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -11,6 +9,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 
 public class User {
+	
 	@Id @GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid", strategy = "uuid")
 	private String id;
@@ -20,6 +19,7 @@ public class User {
 	private String phnNumber;
 	private String password;
 	private String email;
+	
 	public User() {
 		// TODO Auto-generated constructor stub
 	}

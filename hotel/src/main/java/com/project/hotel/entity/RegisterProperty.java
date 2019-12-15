@@ -2,14 +2,15 @@ package com.project.hotel.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class RegisterProperty {
-	@Id @GeneratedValue(generator="system-uuid")
+
+	@Id 
+	@GeneratedValue(generator="system-uuid")
 	@GenericGenerator(name="system-uuid", strategy = "uuid")
 	private String id;
 	private String ownerName;
@@ -24,11 +25,11 @@ public class RegisterProperty {
 	private String typeOfProperty;
 	private boolean isAvailable;
 	private double price;
-	
-	
-	
-	
-	
+
+
+
+
+
 
 	public String getPinCode() {
 		return pinCode;

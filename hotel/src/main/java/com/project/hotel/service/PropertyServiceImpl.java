@@ -9,16 +9,15 @@ import com.project.hotel.repository.PropertyRepository;
 
 @Service
 public class PropertyServiceImpl implements PropertyService{
-private PropertyRepository repository;
+
+	private PropertyRepository repository;
+	
 	public PropertyServiceImpl(PropertyRepository repository) {
-		// TODO Auto-generated constructor stub
 		this.repository=repository;
 	}
 
 	@Override
-	
 	public ResponseEntity<Object> addProperty(RegisterProperty prop) {
-		// TODO Auto-generated method stub
 		repository.save(prop);
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}
