@@ -10,6 +10,7 @@ import {Signup} from '../actions/SignUpAction';
 // import ImagePicker from 'react-native-image-picker';
 import validation from './utils/validationSchema';
 import SprSignUpStyle from '../theme/SprSignUpStyle';
+import Svg, {Path} from 'react-native-svg';
 
 // const  checkProperty= ["sell", "buy"];
 
@@ -22,20 +23,13 @@ class SprSignUp extends Component {
             icons: 'eye-off-outline',
             count: 0,
             secureTextEntry: true,
-            photo: null
+            photo: null,
+            sell: false,
+            rent: false,
+            disabled: false,
+            sellDisabled: false
         }
     }
-    // handleChoosePhoto = () => {
-    //     const options = {
-    //       noData: true,
-    //     }
-    //     ImagePicker.launchImageLibrary(options, response => {
-    //       if (response.uri) {
-    //         this.setState({ photo: response })
-    //       }
-    //     });
-        
-    // }
     toggleIcon = (e) => {
         this.setState({
             count: this.state.count+1
@@ -53,12 +47,6 @@ class SprSignUp extends Component {
             })
         }
     }
-     uuidv4 = () => {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-          return v.toString(16);
-        });
-    }
     render() {
         const styles = SprSignUpStyle;
         // const {photo} = this.state;
@@ -68,6 +56,16 @@ class SprSignUp extends Component {
             <>
                 <ScrollView>
                     <View style={styles.container}>
+                    <Svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <Path d="M0.00,49.98 C290.63,266.94 207.67,-110.03 502.25,71.53 L500.00,0.00 L0.00,0.00 Z" stroke="#3498db" fill="#3498db" />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text /><Text />
+                    <Text />
+            </Svg>
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>
                                 <Text style={styles.ColoredText}> {receivedValue +  ' Sign Up'}
@@ -80,8 +78,18 @@ class SprSignUp extends Component {
                                     email: this.props.email, 
                                     password: this.props.password, 
                                     phnNumber: this.props.phnNumber,
-                                    role: receivedValue}}
+                                    role: receivedValue,
+                                   }}
                                 onSubmit={(values) => {
+                                    var data = {
+                                        email: values.email,
+                                        firstName: this.props.firstName, 
+                                        lastName: this.props.lastName, 
+                                        email: this.props.email, 
+                                        password: this.props.password, 
+                                        phnNumber: this.props.phnNumber,
+                                        role: receivedValue,
+                                    }
                                     const _data = values;
                                     this.props.Signup(_data, () => {
                                         this.props.navigation.navigate('Login')
@@ -90,14 +98,9 @@ class SprSignUp extends Component {
                                 validationSchema={validation}>
                                 {formikProps => (
                                     <React.Fragment  >
-                                        <TextInput
-                                        style={{paddingLeft: 15, paddingRight: 15, display: 'none'}}
-                                            disable={true}
-                                            editable={true}
-                                            value={'Hotel_' + this.uuidv4()} />
                                         <FormInput
-                                            style={{ borderWidth: 1, fontSize: 20,
-                                            borderColor: formikProps.touched.firstName && formikProps.errors.firstName ? 'red' : 'grey' }}
+                                            style={{ borderWidth: 1, fontSize: 20, borderRadius: 4,
+                                            borderColor: formikProps.touched.firstName && formikProps.errors.firstName ? 'red' : '#999999' }}
                                             formFieldLabel="first Name"
                                             placeHolderText="Jhon Doe"
                                             handleChange={formikProps.handleChange('firstName')}
@@ -108,8 +111,8 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.firstName && formikProps.errors.firstName}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1, fontSize: 20,
-                                            borderColor: formikProps.touched.lastName && formikProps.errors.lastName ? 'red' : 'grey' }}
+                                            style={{ borderWidth: 1, fontSize: 20,borderRadius: 4,
+                                            borderColor: formikProps.touched.lastName && formikProps.errors.lastName ? 'red' : '#999999' }}
                                             formFieldLabel="last Name"
                                             placeHolderText="Jhon Doe"
                                             handleChange={formikProps.handleChange('lastName')}
@@ -120,8 +123,8 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.lastName && formikProps.errors.lastName}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1,  fontSize: 20,
-                                            borderColor: formikProps.touched.email && formikProps.errors.email ? 'red' : 'grey' }}
+                                            style={{ borderWidth: 1,  fontSize: 20,borderRadius: 4,
+                                            borderColor: formikProps.touched.email && formikProps.errors.email ? 'red' : '#999999' }}
                                             formFieldLabel="Email"
                                             placeHolderText="mikysingh1986@gmail.com"
                                             handleChange={formikProps.handleChange('email')}
@@ -132,8 +135,8 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.email && formikProps.errors.email}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1,  fontSize: 20,
-                                            borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : '#2c3e50' }}
+                                            style={{ borderWidth: 1,  fontSize: 20,borderRadius: 4,
+                                            borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : '#999999' }}
                                             formFieldLabel="Password"
                                             secureTextEntry={this.state.secureTextEntry}
                                             toggleIcon={(e) => {
@@ -151,8 +154,8 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.password && formikProps.errors.password}
                                             />
                                         <FormInput
-                                            style={{ borderWidth: 1,  fontSize: 20,
-                                            borderColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'grey' }}
+                                            style={{ borderWidth: 1,  fontSize: 20,borderRadius: 4,
+                                            borderColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : '#999999' }}
                                             formFieldLabel="Phone Number"
                                             onBlur={formikProps.handleBlur('phnNumber')}
                                             placeHolderText="Please enter PhoneNumber"
@@ -161,13 +164,13 @@ class SprSignUp extends Component {
                                             validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
                                             />
                                         <View>
-                                        </View>
+                                        
+                                    </View>
                                         {this.props.isPending === true ? (
-                                         <ActivityIndicator />
+                                         <ActivityIndicator size="large" color="#3498db" />
                                          ) : (
                                             <Button buttonAction={() => {
                                                 formikProps.handleSubmit();
-                                               
                                             }} label="Signup" />
                                          )}
                                     </React.Fragment>
@@ -180,9 +183,10 @@ class SprSignUp extends Component {
                                     this.props.authSwitch;
                                      this.props.navigation.navigate("Login")
                                     }} style={{
-                                fontSize: 17,
-                                opacity: .6,
-                                color: '#186057',
+                                fontSize: 18,
+                                opacity: .7,
+                                fontWeight: "bold",
+                                color: '#2c3e50',
                                 marginBottom: 30
                             }}>Already a user please login</Text>
                             

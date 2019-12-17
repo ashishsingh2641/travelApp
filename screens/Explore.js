@@ -30,12 +30,12 @@ class Explore extends Component {
         }
     }
     componentDidMount() {
-        axios.get('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllCity')
+        axios.get('http://192.168.0.103:5000/api/property/getAllCity')
             .then(res => this.setState({
                 cities: res.data,
                 spinner: true
             }, () => {
-                axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${res.data[0]}`)
+                axios.get(`http://192.168.0.103:5000/api/property/getAllProperty/${res.data[0]}`)
                     .then(newRes => this.setState({
                         currentCitiesData: newRes.data,
                         spinner: false
@@ -60,7 +60,7 @@ class Explore extends Component {
                             this.setState({
                                 selectedItem: itemValue,
                             }, () => {
-                                axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${itemValue}`)
+                                axios.get(`http://192.168.0.103:5000/api/property/getAllProperty/${itemValue}`)
                                     .then(res => {
                                         if (res !== undefined) {
                                             this.setState({
@@ -95,7 +95,7 @@ class Explore extends Component {
                             this.setState({
                                 spinner: true
                             })
-                            axios.get(`http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/getAllProperty/${this.state.selectedItem}`)
+                            axios.get(`http://192.168.0.103:5000/api/property/getAllProperty/${this.state.selectedItem}`)
                                     .then(res => {
                                         if (res !== undefined) {
                                             this.setState({

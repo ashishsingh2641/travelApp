@@ -8,7 +8,8 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import LoginStyle from '../theme/LoginStyle';
 import {loginAction} from '../actions/LoginAction';
-import LinearGradient from 'react-native-linear-gradient';
+import Svg, {Path} from 'react-native-svg';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const validationSchema1 = yup.object().shape({
     email: yup
@@ -29,7 +30,27 @@ class Login extends Component {
         super(props);
         this.state = {
             loginMessage: '',
-            isLoading: false
+            isLoading: false,
+            icons: 'eye-off-outline',
+            count: 0,
+            secureTextEntry: true,
+        }
+    }
+    toggleIcon = (e) => {
+        this.setState({
+            count: this.state.count+1
+        });
+        if (this.state.count % 2 === 0) {
+            this.setState({
+                icons: "eye-outline",
+                secureTextEntry: false
+
+            })
+        }else {
+            this.setState({
+                icons: "eye-off-outline",
+                secureTextEntry: true
+            })
         }
     }
     render() {
@@ -37,10 +58,17 @@ class Login extends Component {
         return (
             <>
                 <ScrollView>
-               
                     <View style={styles.container}>
-                    <LinearGradient start={{ x: 1, y: 1 }} end={{ x: 0, y: 1 }}
-                    colors={['#2c3e50', '#5691c8']} style={{ zIndex: 0}}>
+                    <Svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <Path d="M0.00,49.98 C290.63,266.94 207.67,-110.03 502.25,71.53 L500.00,0.00 L0.00,0.00 Z" stroke="#3498db" fill="#3498db" />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text /><Text />
+                    <Text />
+            </Svg>
                         <View style={styles.contentContainer}>
                             <View style={styles.titleWrapper}>
                                 <Text style={styles.ColoredText}> Login.
@@ -66,9 +94,8 @@ class Login extends Component {
                                 {formikProps => (
                                     <React.Fragment>
                                         <FormInput
-                                        color={'white'}
-                                            style={{ borderBottomWidth: 1, color: "white",
-                                            borderBottomColor: formikProps.touched.email && formikProps.errors.email ? 'red' : 'white' }}
+                                            style={{ borderWidth: 1,  fontSize: 20, borderRadius: 4,
+                                            borderColor: formikProps.touched.email && formikProps.errors.email ? 'red' : '#999999' }}
                                             formFieldLabel="Email"
                                             placeHolderText="mikysingh1986@gmail.com"
                                             handleChange={formikProps.handleChange('email')}
@@ -78,32 +105,26 @@ class Login extends Component {
                                             autoFocus
                                             validateText={formikProps.touched.email && formikProps.errors.email}
                                             />
-                                        {/* <FormInput
-                                            color={'white'}
-                                            style={{borderBottomWidth: 2, color: 'white', 
-                                            borderBottomColor: formikProps.touched.phnNumber && formikProps.errors.phnNumber ? 'red' : 'white' }}
-                                            formFieldLabel="Phone Number"
-                                            placeHolderText="+91 XXXXXXXXXX"
-                                            handleChange={formikProps.handleChange('phnNumber')}
-                                            onBlur={formikProps.handleBlur('phnNumber')}
-                                            value={formikProps.values.phnNumber}
-                                            required={true} 
-                                            placeholderTextColor="white"
-                                            autoFocus
-                                            validateText={formikProps.touched.phnNumber && formikProps.errors.phnNumber}
-                                            /> */}
                                         <FormInput
-                                            style={{ borderBottomWidth: 2, color: 'white',
-                                            borderBottomColor: formikProps.touched.password && formikProps.errors.password ? 'red' : 'white' }}
+                                            style={{ borderWidth: 1,  fontSize: 20, borderRadius: 4,
+                                            borderColor: formikProps.touched.password && formikProps.errors.password ? 'red' : '#999999' }}
                                             formFieldLabel="Password"
                                             secureTextEntry={false}
                                             onBlur={formikProps.handleBlur('password')}
                                             placeHolderText="Please enter password"
-                                            placeholderTextColor="white"
+                                            placeholderTextColor="#999999"
                                             handleChange={formikProps.handleChange('password')}
                                             value={formikProps.values.password} required={true} 
                                             validateText={formikProps.touched.password && formikProps.errors.password}
-                                            />
+                                            secureTextEntry={this.state.secureTextEntry}
+                                            icons={this.state.icons}
+                                            toggleIcon={(e) => {
+                                                if (formikProps.values.password === "" || formikProps.values.password === undefined) {
+                                                    e.preventDefault()
+                                                } else {
+                                                    this.toggleIcon()
+                                                }
+                                            }}/>
                                         <View>
                                         <Text style={{color: 'blue', textAlign: 'right', marginRight: 20}}
                                                 onPress={() =>{
@@ -116,22 +137,23 @@ class Login extends Component {
                                         {this.props.isPending === true ? (
                                          <ActivityIndicator />
                                          ) : (
-                                            <Button buttonAction={formikProps.handleSubmit} label="login-button" />
+                                            <Button buttonAction={formikProps.handleSubmit} label="Login" />
                                          )}
                                     </React.Fragment>
                                 )}
                             </Formik>
                         </View>
                         <View style={styles.orLoginUsing}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate("SprSignUp")}>
                             <Text style={{
                                 fontSize: 17,
-                                opacity: .6,
+                                opacity: .8,
+                                marginBottom: 20,
+                                fontWeight: "bold",
                                 color: '#2c3e50'
-                            }}>or login with</Text>
-                            <SocialShare />
+                            }}>or Sign up</Text>
+                            </TouchableOpacity>
                         </View>
-                        
-                    </LinearGradient>
                     </View>
                 </ScrollView>
             </>

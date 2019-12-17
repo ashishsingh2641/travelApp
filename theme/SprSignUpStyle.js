@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const SprSignUpStyle = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5FCFF',
+        backgroundColor: '#ffffff',
     },
     titleWrapper: {
         marginLeft: 20,
@@ -20,7 +20,7 @@ const SprSignUpStyle = StyleSheet.create({
         marginBottom: 40
     },
     orLoginUsing: {
-        marginTop: 50,
+        marginTop: 30,
         alignItems: 'center',
     },
     

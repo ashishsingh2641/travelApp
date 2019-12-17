@@ -12,7 +12,7 @@ export const Signup = (_data, pagePath) => {
         dispatch(signUpSuccess(false));
         dispatch(signUpError(null));
         //Auth.saveItem("role", _data['role'])
-        axios.post('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/user/register', {
+        axios.post('http://192.168.0.103:5000/api/user/register', {
             role: _data.role,
             firstName: _data.firstName,
             lastName: _data.lastName,

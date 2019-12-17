@@ -27,7 +27,7 @@ const Role = (props) => {
                     <Text style={{ fontSize: 30, fontWeight: 'bold', marginBottom: 30, color: 'white' }}>Choose Your Role</Text>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }} >
                         <TouchableOpacity id={TravelerID} onPress={() => {
-                                setTravelId('TravelerID')
+                                setTravelId('ServiceProvider')
                             }}>
                             <View style={{ width: 130, height: 130, marginLeft: 0, borderWidth: 0.5, borderColor: '#dddddd', elevation: 1, zIndex: 999999, backgroundColor:"#2c3e50" }} >
                             <LinearGradient
@@ -38,12 +38,12 @@ const Role = (props) => {
                                         style={{ flex: 1, width: null, height: null, resizeMode: 'contain', marginTop: 10 }} />
                                 </View>
                                 <View style={{ flex: 1, paddingTop: 10 }}>
-                                    <Text style={{ textAlign: 'center', color: '#fff' }}>Traveler</Text>
+                                    <Text style={{ textAlign: 'center', color: '#fff' }}>Service provider</Text>
                                 </View>
                             </LinearGradient>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity id={HostID} onPress={() => setHostId('HostID')}>
+                        <TouchableOpacity id={HostID} onPress={() => setHostId('ServiceConsumer')}>
                             <View style={{ width: 130, height: 130, marginLeft: 20, borderWidth: 0.5, borderColor: '#dddddd', elevation: 1}}>
                             <LinearGradient
                                 start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
@@ -54,7 +54,7 @@ const Role = (props) => {
                                 </View>
                                 
                                 <View style={{ flex: 1, paddingTop: 10 }}>
-                                    <Text style={{ textAlign: 'center', color: '#fff' }}>Host</Text>
+                                    <Text style={{ textAlign: 'center', color: '#fff' }}>Service consumer</Text>
                                 </View>
                                 </LinearGradient>
                             </View>
@@ -85,7 +85,7 @@ const Role = (props) => {
                         })()
                     }}/>
                 :  <View style={[styles.container, styles.horizontal]}>
-                        <ActivityIndicator size="large" color="#fff" />
+                        <ActivityIndicator size="large" color="#3498db" />
                     </View>
                 }
         </View>

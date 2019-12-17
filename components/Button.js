@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Icons from 'react-native-vector-icons/AntDesign'
 
 const Button = (props) => {
     return (
@@ -11,7 +12,7 @@ const Button = (props) => {
                 colors={['#2c3e50', '#3498db']}
                 style={styles.linearGradient}>
                 <Text style={styles.buttonText}>
-                    {props.label}
+                    {props.label ? props.label : <Icons name={props.icon} color={props.color} />}
                 </Text>
             </LinearGradient>
         </TouchableOpacity>
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
         width: "90%",
         alignSelf: 'center',
         marginTop: 40,
-        marginBottom: 10,
+        marginBottom: 5,
         elevation: 4,
         borderRadius: 4,
         zIndex: 3

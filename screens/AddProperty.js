@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, Picker, StyleSheet, Image, Dimensions } from 'react-native';
+import { View, Text, ScrollView, Picker, StyleSheet, Image, Dimensions, CheckBox, TextInput } from 'react-native';
 import axios from 'axios';
 import states from '../modal/cities.json';
 import FormInput from '../components/FormInput';
@@ -10,6 +10,7 @@ import Recmonded from '../components/Recmonded';
 import ImagePicker from 'react-native-image-crop-picker';
 import { validateProperty } from './utils/AddPropertyValidation';
 import Spinner from 'react-native-loading-spinner-overlay';
+import Svg, {Path} from 'react-native-svg';
 
 const width = Dimensions.get('window').width;
 
@@ -35,7 +36,11 @@ class AddProperty extends Component {
             selectedCities: '',
             imageUrl: [],
             spinner: false,
-            textContent: 'Loading your items...'
+            textContent: 'Loading your items...',
+            sell: false,
+            rent: false,
+            disabled: false,
+            sellDisabled: false
         }
     }
     componentDidMount() {
@@ -68,6 +73,16 @@ class AddProperty extends Component {
         return (
             <ScrollView>
                 <View>
+                <Svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <Path d="M0.00,49.98 C290.63,266.94 207.67,-110.03 502.25,71.53 L500.00,0.00 L0.00,0.00 Z" stroke="#3498db" fill="#3498db" />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text />
+                    <Text /><Text />
+                    <Text />
+            </Svg>
                     <Text style={{ fontSize: 30, marginLeft: 20, marginTop: 20 }}>Add Property</Text>
                     <Formik initialValues={{
                         address1: '',
@@ -92,7 +107,8 @@ class AddProperty extends Component {
                                     'Content-Type': 'application/json; charset=UTF-8'
                                 }
                             }
-                            axios.post('http://travel-env.45kvuuymy5.ap-south-1.elasticbeanstalk.com/api/property/addProperty', {
+                            debugger;
+                            axios.post('http://192.168.0.103:5000/api/property/addProperty', {
                                 address1: values.address1,
                                 address2: values.address2,
                                 city: this.state.selectedCities,
@@ -102,25 +118,31 @@ class AddProperty extends Component {
                                 landmark: values.landmark,
                                 typeOfProperty: '',
                                 ownerMobileNumber: '',
-                                isAvailable: '',
-                                ownerName: ''
+                                is_available: false,
+                                ownerName: '',
+                                fullFurnished: false,
+                                semiFurnished: true,
+                                description: 'asdhjashdjahsdjahsdj',
+                                ac: true,
+                                nonAc: false
                             }, appconfig).then(res => {
+                                this.setState({
+                                    spinner: false
+                                })
                                 alert("Upload successfull")
                                 if (res.status === 200) {
-                                    this.setState({
-                                        spinner: false
-                                    })
+                                   
                                     this.props.navigation.navigate("Explore");
                                     this.setState({ imageUrl: [] });
                                 }
-                            }).catch(err => console.log(JSON.stringify(err)))
+                            }).catch(err =>{console.log(JSON.stringify(err))} )
                         }}
                         validationSchema={validateProperty}>
                         {formikProps => (
                             <>
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,
+                                        borderWidth: 1, fontSize: 20,borderRadius: 4,
                                         borderColor: formikProps.touched.address1 && formikProps.errors.address1 ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="AddressLine1"
@@ -132,7 +154,7 @@ class AddProperty extends Component {
                                 />
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,
+                                        borderWidth: 1, fontSize: 20,borderRadius: 4,
                                         borderColor: formikProps.touched.address1 && formikProps.errors.address1 ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="address2"
@@ -144,7 +166,7 @@ class AddProperty extends Component {
                                 />
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,
+                                        borderWidth: 1, fontSize: 20,borderRadius: 4,
                                         borderColor: formikProps.touched.landmark && formikProps.errors.landmark ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="landmark"
@@ -197,7 +219,7 @@ class AddProperty extends Component {
                                 </View>
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20, marginBottom: 40,
+                                        borderWidth: 1, fontSize: 20, marginBottom: 40,borderRadius: 4,
                                         borderColor: formikProps.touched.pinCode && formikProps.errors.pinCode ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="Pincode"
@@ -207,6 +229,47 @@ class AddProperty extends Component {
                                     value={formikProps.values.pinCode} required={true}
                                     validateText={formikProps.touched.pinCode && formikProps.errors.pinCode}
                                 />
+                                <View style={{ flexDirection: 'column', marginLeft: 15, marginRight: 15 }}>
+                                            <Text style={{fontWeight: 'bold', fontSize: 18}}>Property Type *</Text>
+                                            <View style={{flexDirection: "row"}}>
+                                                <CheckBox
+                                                 disabled={this.state.sellDisabled}
+                                                value={this.state.sell}
+                                                onValueChange={() => {
+                                                    this.setState({ sell: !this.state.sell }, () => {
+                                                        if (this.state.sell === true) {
+                                                            this.setState({
+                                                                disabled: true
+                                                            })
+                                                        } else {
+                                                            this.setState({
+                                                                disabled: false
+                                                            })
+                                                        }
+                                                    })
+                                                }}
+                                                />
+                                                <Text style={{marginTop: 5, fontSize: 18}}>Sell</Text>
+                                            </View>
+                                            <View style={{flexDirection: "row"}}>
+                                                <CheckBox
+                                                    value={this.state.rent}
+                                                    disabled={this.state.disabled}
+                                                    onValueChange={(event) => this.setState({ rent: !this.state.rent }, () => {
+                                                        if (this.state.sell === true) {
+                                                            this.setState({
+                                                                sellDisabled: true
+                                                            })
+                                                        } else {
+                                                            this.setState({
+                                                                sellDisabled: false
+                                                            })
+                                                        }
+                                                    })}/>
+                                                <Text style={{marginTop: 5, fontSize: 18}}>Rent</Text>
+                                            </View>
+                                        </View>
+                                 
                                 <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                                     {this.state.imageUrl <= 0 ? 
                                             <Text>{"please uplaod images"}</Text>
@@ -222,8 +285,24 @@ class AddProperty extends Component {
                                                 })}
                                             </>
                                         }
-                                    {this.state.imageUrl.length > 0 ? <Text /> : <Button buttonAction={this.handleChoosePhoto} label="Choose Photo" />}
+                                    {this.state.imageUrl.length > 0 ? <Text /> : 
+                                    <Button buttonAction={this.handleChoosePhoto} icon={"download"} color={"white"} style={{fontSize: 20, fontWeight: "bold"}} />}
                                 </View>
+                                <Text style={{margin: 20}}>Description *</Text>
+                                <View style={{ borderColor: "grey", marginLeft: 20, marginRight: 20,
+                                        borderWidth: 1,
+                                        padding: 5}}>
+                                       
+                                        <TextInput
+                                        style={{height: 50, borderRadius: 4,
+                                            justifyContent: "flex-start"}}
+                                        underlineColorAndroid="transparent"
+                                        placeholder="Type something"
+                                        placeholderTextColor="grey"
+                                        numberOfLines={10}
+                                        multiline={true}
+                                        />
+                                    </View>
                                 <Spinner
                                     textStyle={{ color: "white" }}
                                     visible={this.state.spinner}

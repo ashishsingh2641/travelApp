@@ -47,11 +47,15 @@ const ExploreScreen = createStackNavigator({
                 header: null,
             } 
         },
-    Explore: { screen: Explore },
-    Login: {screen: Login},
+    Explore: { screen: Explore, navigationOptions: {
+      header: null,
+  }  },
+    Login: {screen: Login, navigationOptions: {
+      header: null,
+  } },
     AddProperty: {screen: AddProperty},
-    TabViewComponent: {screen: TabViewComponent},
-    ForgotPassword: {screen: ForgotPassword}
+    ForgotPassword: {screen: ForgotPassword,
+      TabViewComponent: {screen: TabViewComponent},}
   });
   
   const RegisterScreen = createStackNavigator({
@@ -59,12 +63,16 @@ const ExploreScreen = createStackNavigator({
             header: null,
         } 
     },
-    SprSignUp: { screen: SprSignUp },
-    Login: {screen: Login},
-    TabViewComponent: {screen: TabViewComponent},
-    Explore: {screen: Explore},
-    AddProperty: {screen: AddProperty},
-    ForgotPassword: {screen: ForgotPassword}
+    SprSignUp: { screen: SprSignUp,
+      TabViewComponent: {screen: TabViewComponent}, },
+    Login: {screen: Login,
+      TabViewComponent: {screen: TabViewComponent},},
+    Explore: {screen: Explore,
+      TabViewComponent: {screen: TabViewComponent},},
+    AddProperty: {screen: AddProperty,
+      TabViewComponent: {screen: TabViewComponent},},
+    ForgotPassword: {screen: ForgotPassword,
+      TabViewComponent: {screen: TabViewComponent},}
   }, {headerMode: 'screen'});
 export default createAppContainer(createBottomTabNavigator(
     {

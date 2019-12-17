@@ -15,7 +15,7 @@ export const loginAction = (_data, pagePath, newPagepath) => {
        // Auth.saveItem("role", _data['role']);
 
        //axios.get("https://localhost:5000/api/user/getAllUsers").then(res => alert(JSON.stringify(res))).catch(err => console.log(err))
-        axios.post('http://192.168.0.104:5000/api/user/login', {
+        axios.post('http://192.168.0.103:5000/api/user/login', {
             // role: _data.role,
             // firstName: _data.firstName,
             // lastName: _data.lastName,
@@ -32,12 +32,13 @@ export const loginAction = (_data, pagePath, newPagepath) => {
                 //alert(res.data.role)
                 let decoded = jwtDecode(res.data);
                     console.log(decoded, ":::::::::::::::::");
+                    alert(decoded.auth.authority);
                 debugger
-                if (res.data.role === "TravelerID") {
+                if (decoded.auth.authority === "ServiceProvider") {
                     debugger;
                     return pagePath();
                 }
-                else if (res.data.role === 'Host') {
+                else if (decoded.auth.authority === 'ServiceConsumer') {
                     return newPagepath();
                 }
 
@@ -46,6 +47,7 @@ export const loginAction = (_data, pagePath, newPagepath) => {
            // debugger;
             alert(JSON.stringify(err))
             dispatch(loginError(err));
+            dispatch(loginPending(false))
             console.log(err)
         })
     }
