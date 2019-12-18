@@ -152,6 +152,10 @@
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/drawable-hdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
     },
     {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_domserializer_foreignnames.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_domserializer_foreignnames.json"
+    },
+    {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable_abc_dialog_material_background.xml.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/drawable/abc_dialog_material_background.xml"
     },
@@ -900,6 +904,10 @@
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/anim/abc_fade_out.xml"
     },
     {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_entities_lib_maps_legacy.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_entities_lib_maps_legacy.json"
+    },
+    {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-xxxhdpi-v4_ucrop_ic_reset.png.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/412c11890f7ee6c16e92bda862282442/res/drawable-xxxhdpi-v4/ucrop_ic_reset.png"
     },
@@ -950,6 +958,10 @@
     {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_entities_lib_maps_entities.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_entities_lib_maps_entities.json"
     },
     {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/animator_design_fab_hide_motion_spec.xml.flat",
@@ -1144,6 +1156,10 @@
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/412c11890f7ee6c16e92bda862282442/res/drawable-xxhdpi-v4/ucrop_ic_cross.png"
     },
     {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_cssselect_lib_procedure.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_cssselect_lib_procedure.json"
+    },
+    {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/color_mtrl_btn_stroke_color_selector.xml.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/2f30cd349cb35c7a1e43a38993df6da1/res/color/mtrl_btn_stroke_color_selector.xml"
     },
@@ -1202,6 +1218,10 @@
     {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/drawable-xhdpi-v4/abc_list_pressed_holo_light.9.png"
+    },
+    {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_entities_lib_maps_decode.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_entities_lib_maps_decode.json"
     },
     {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-v21_abc_list_divider_material.xml.flat",
@@ -1576,6 +1596,10 @@
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/412c11890f7ee6c16e92bda862282442/res/drawable-mdpi-v4/ucrop_ic_rotate.png"
     },
     {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_entities_lib_maps_xml.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_entities_lib_maps_xml.json"
+    },
+    {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png"
     },
@@ -1938,6 +1962,10 @@
     {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/3a518fc6c742e975817937af8c36b514/res/drawable-xhdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/raw_node_modules_csstree_dist_defaultsyntax.json.flat",
+        "source": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/generated/res/react/release/raw/node_modules_csstree_dist_defaultsyntax.json"
     },
     {
         "merged": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/res/merged/release/drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
