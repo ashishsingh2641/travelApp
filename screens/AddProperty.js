@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, Picker, StyleSheet, Image, Dimensions, CheckBox, TextInput } from 'react-native';
+import { View, Text, ScrollView, Picker,Dimensions } from 'react-native';
+import HeaderComponent from '../components/HeaderComponent';
 import axios from 'axios';
 import states from '../modal/cities.json';
 import FormInput from '../components/FormInput';
@@ -10,7 +11,8 @@ import Recmonded from '../components/Recmonded';
 import ImagePicker from 'react-native-image-crop-picker';
 import { validateProperty } from './utils/AddPropertyValidation';
 import Spinner from 'react-native-loading-spinner-overlay';
-import Svg, {Path} from 'react-native-svg';
+import Svg, { Path } from 'react-native-svg';
+import SwitchComponent from '../components/SwitchComponent';
 
 const width = Dimensions.get('window').width;
 
@@ -40,7 +42,14 @@ class AddProperty extends Component {
             sell: false,
             rent: false,
             disabled: false,
-            sellDisabled: false
+            sellDisabled: false,
+            textField: '',
+            isRentOn: false,
+            isSellOn: false,
+            isAc: false,
+            isRentdisabled: false,
+            isNonac: false,
+            isselldisabled: false
         }
     }
     componentDidMount() {
@@ -50,51 +59,58 @@ class AddProperty extends Component {
     }
     handleChoosePhoto = (event) => {
         ImagePicker.openPicker({
-            width: width-20,
+            width: width - 20,
             height: 200,
             cropping: true,
             multiple: true,
             includeBase64: true,
             compressImageQuality: 0
-          }).then(image => {
-              const imageData = [];
-              imageData.push(image);
-                if (image.length <= 3) {
-                    this.setState({imageUrl: image});
-                }
-                else {
-                    event.preventDefault();
-                    alert("You show not select more then 3 images")
-                }
-          });
+        }).then(image => {
+            const imageData = [];
+            imageData.push(image);
+            if (image.length <= 3) {
+                this.setState({ imageUrl: image });
+            }
+            else {
+                event.preventDefault();
+                alert("You show not select more then 3 images")
+            }
+        });
     }
     render() {
         const { photo } = this.state;
         return (
             <ScrollView>
                 <View>
-                <Svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <Path d="M0.00,49.98 C290.63,266.94 207.67,-110.03 502.25,71.53 L500.00,0.00 L0.00,0.00 Z" stroke="#3498db" fill="#3498db" />
-                    <Text />
-                    <Text />
-                    <Text />
-                    <Text />
-                    <Text />
-                    <Text /><Text />
-                    <Text />
-            </Svg>
-                    <Text style={{ fontSize: 30, marginLeft: 20, marginTop: 20 }}>Add Property</Text>
+                <HeaderComponent />
+                    <Svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{zIndex:0}}>
+                        <View style={{width: "100%", zIndex: 1}}>
+                           
+                        </View>
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Text />
+                        <Path d="M0.00,49.98 C290.63,266.94 207.67,-110.03 502.25,71.53 L500.00,0.00 L0.00,0.00 Z" stroke="#3498db" fill="#3498db" />
+                    </Svg>
+                    <Text style={{ fontSize: 30, marginLeft: 20, marginTop: 0 }}>Add Property</Text>
                     <Formik initialValues={{
                         address1: '',
                         address2: '',
                         city: '',
-                        pinCode: '123456',
+                        pinCode: '',
                         imageUrl: '',
                         state: '',
                         landmark: '',
                         typeOfProperty: '',
                         ownerMobileNumber: '',
-                        ownerName: ''
+                        ownerName: '',
+                        description: '',
                     }}
                         onSubmit={(values) => {
                             this.setState({
@@ -122,7 +138,7 @@ class AddProperty extends Component {
                                 ownerName: '',
                                 fullFurnished: false,
                                 semiFurnished: true,
-                                description: 'asdhjashdjahsdjahsdj',
+                                description: values.description,
                                 ac: true,
                                 nonAc: false
                             }, appconfig).then(res => {
@@ -131,21 +147,20 @@ class AddProperty extends Component {
                                 })
                                 alert("Upload successfull")
                                 if (res.status === 200) {
-                                   
                                     this.props.navigation.navigate("Explore");
                                     this.setState({ imageUrl: [] });
                                 }
-                            }).catch(err =>{console.log(JSON.stringify(err))} )
+                            }).catch(err => { console.log(JSON.stringify(err)) })
                         }}
                         validationSchema={validateProperty}>
                         {formikProps => (
                             <>
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,borderRadius: 4,
+                                        borderWidth: 1, fontSize: 15, borderRadius: 4,
                                         borderColor: formikProps.touched.address1 && formikProps.errors.address1 ? 'red' : 'grey'
                                     }}
-                                    formFieldLabel="AddressLine1"
+                                    formFieldLabel="Address line 1"
                                     onBlur={formikProps.handleBlur('address1')}
                                     placeHolderText="Please enter AddressLine"
                                     handleChange={formikProps.handleChange('address1')}
@@ -154,10 +169,10 @@ class AddProperty extends Component {
                                 />
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,borderRadius: 4,
+                                        borderWidth: 1, fontSize: 15, borderRadius: 4,
                                         borderColor: formikProps.touched.address1 && formikProps.errors.address1 ? 'red' : 'grey'
                                     }}
-                                    formFieldLabel="address2"
+                                    formFieldLabel="Address line 2"
                                     onBlur={formikProps.handleBlur('address2')}
                                     placeHolderText="Please enter address2"
                                     handleChange={formikProps.handleChange('address2')}
@@ -166,7 +181,7 @@ class AddProperty extends Component {
                                 />
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20,borderRadius: 4,
+                                        borderWidth: 1, fontSize: 15, borderRadius: 4,
                                         borderColor: formikProps.touched.landmark && formikProps.errors.landmark ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="landmark"
@@ -219,95 +234,98 @@ class AddProperty extends Component {
                                 </View>
                                 <FormInput
                                     style={{
-                                        borderWidth: 1, fontSize: 20, marginBottom: 40,borderRadius: 4,
+                                        borderWidth: 1, fontSize: 15, marginBottom: 10, borderRadius: 4,
                                         borderColor: formikProps.touched.pinCode && formikProps.errors.pinCode ? 'red' : 'grey'
                                     }}
                                     formFieldLabel="Pincode"
                                     onBlur={formikProps.handleBlur('pinCode')}
-                                    placeHolderText="Please enter pinCode"
+                                    placeHolderText="Please enter pincode"
                                     handleChange={formikProps.handleChange('pinCode')}
                                     value={formikProps.values.pinCode} required={true}
                                     validateText={formikProps.touched.pinCode && formikProps.errors.pinCode}
                                 />
-                                <View style={{ flexDirection: 'column', marginLeft: 15, marginRight: 15 }}>
-                                            <Text style={{fontWeight: 'bold', fontSize: 18}}>Property Type *</Text>
-                                            <View style={{flexDirection: "row"}}>
-                                                <CheckBox
-                                                 disabled={this.state.sellDisabled}
-                                                value={this.state.sell}
-                                                onValueChange={() => {
-                                                    this.setState({ sell: !this.state.sell }, () => {
-                                                        if (this.state.sell === true) {
-                                                            this.setState({
-                                                                disabled: true
-                                                            })
-                                                        } else {
-                                                            this.setState({
-                                                                disabled: false
-                                                            })
-                                                        }
-                                                    })
-                                                }}
-                                                />
-                                                <Text style={{marginTop: 5, fontSize: 18}}>Sell</Text>
-                                            </View>
-                                            <View style={{flexDirection: "row"}}>
-                                                <CheckBox
-                                                    value={this.state.rent}
-                                                    disabled={this.state.disabled}
-                                                    onValueChange={(event) => this.setState({ rent: !this.state.rent }, () => {
-                                                        if (this.state.sell === true) {
-                                                            this.setState({
-                                                                sellDisabled: true
-                                                            })
-                                                        } else {
-                                                            this.setState({
-                                                                sellDisabled: false
-                                                            })
-                                                        }
-                                                    })}/>
-                                                <Text style={{marginTop: 5, fontSize: 18}}>Rent</Text>
-                                            </View>
-                                        </View>
-                                 
-                                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                    {this.state.imageUrl <= 0 ? 
-                                            <Text>{"please uplaod images"}</Text>
-                                            :
-                                            <>
-                                                <Text style={{textAlign: 'left'}}>uploded images</Text>
-                                                {this.state.imageUrl.map((item) => {
-                                                   return (
-                                                        <View key={Math.random()}>
-                                                             <Recmonded imagrUri={`data:${item.mime};base64,${item.data}`} />
-                                                        </View>
-                                                   )
-                                                })}
-                                            </>
-                                        }
-                                    {this.state.imageUrl.length > 0 ? <Text /> : 
-                                    <Button buttonAction={this.handleChoosePhoto} icon={"download"} color={"white"} style={{fontSize: 20, fontWeight: "bold"}} />}
+                                <View style={{marginLeft: 20, marginRight: 20}}>
+                                    <Text>Property Type*</Text>
+                                    <SwitchComponent label={"SELL"} handleSwitch={() => {
+                                        this.setState({isSellOn:!this.state.isSellOn}, () => {
+                                            if (this.state.isSellOn === true) {
+                                                this.setState({
+                                                    isRentdisabled: true,
+                                                    isRentOn: false
+                                                })
+                                            }
+                                        })
+                                    }} isSwitchOn={this.state.isSellOn}/>
+                                     <SwitchComponent label={"RENT"} handleSwitch={() => {
+                                        this.setState({isRentOn: !this.state.isRentOn}, () => {
+                                            if (this.state.isRentOn === true) {
+                                                this.setState({
+                                                    isselldisabled: true,
+                                                    isSellOn: false
+                                                })
+                                            }
+                                        })
+                                    }} isSwitchOn={this.state.isRentOn} 
+                                    disabled={this.state.isRentdisabled} />
+
+                                   {/* Ac */}
+                                    <SwitchComponent label={"AC"} handleSwitch={(value) => {
+                                        this.setState({isAc: value})
+                                    }} isSwitchOn={this.state.isAc} />
+                                    {/* Ac */}
+                                    {/* Ac */}
+                                    <SwitchComponent label={"NONAC"} handleSwitch={(value) => {
+                                        this.setState({isNonac: value})
+                                    }} isSwitchOn={this.state.isNonac} />
+                                    {/* Ac */}
                                 </View>
-                                <Text style={{margin: 20}}>Description *</Text>
-                                <View style={{ borderColor: "grey", marginLeft: 20, marginRight: 20,
-                                        borderWidth: 1,
-                                        padding: 5}}>
-                                       
-                                        <TextInput
-                                        style={{height: 50, borderRadius: 4,
-                                            justifyContent: "flex-start"}}
+
+                                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                                    {this.state.imageUrl <= 0 ?
+                                        <Text>{"please uplaod images"}</Text>
+                                        :
+                                        <>
+                                            <Text style={{ textAlign: 'left' }}>uploded images</Text>
+                                            {this.state.imageUrl.map((item) => {
+                                                return (
+                                                    <View key={Math.random()}>
+                                                        <Recmonded imagrUri={`data:${item.mime};base64,${item.data}`} />
+                                                    </View>
+                                                )
+                                            })}
+                                        </>
+                                    }
+                                    <View style={{flex:1, width:"100%", justifyContent: 'center', alignItems: 'center'}}>
+                                    {this.state.imageUrl.length > 0 ? <Text /> :
+                                        <Button buttonAction={this.handleChoosePhoto} icon={"download"} color={"white"} style={{ fontSize: 15, fontWeight: "bold" }} />}
+                                    </View>
+                                </View>
+                                <View>
+                                    <FormInput
                                         underlineColorAndroid="transparent"
                                         placeholder="Type something"
                                         placeholderTextColor="grey"
-                                        numberOfLines={10}
+                                        numberOfLines={20}
                                         multiline={true}
-                                        />
-                                    </View>
+                                        style={{
+                                            borderWidth: 1, fontSize: 15, marginBottom: 10, borderRadius: 4, height: 100, borderRadius: 4,
+                                            borderColor: formikProps.touched.description && formikProps.errors.description ? 'red' : 'grey'
+                                        }}
+                                        formFieldLabel="Description"
+                                        onBlur={formikProps.handleBlur('description')}
+                                        placeHolderText="Please enter text...."
+                                        handleChange={formikProps.handleChange('description')}
+                                        value={formikProps.values.description} required={true}
+                                        validateText={formikProps.touched.description && formikProps.errors.description} />
+
+                                </View>
                                 <Spinner
                                     textStyle={{ color: "white" }}
                                     visible={this.state.spinner}
                                     textContent={this.state.textContent} />
-                                <Button label="Addproperty" buttonAction={formikProps.handleSubmit} />
+                               <View style={{marginBottom: 20}}>
+                                    <Button label="Addproperty" buttonAction={formikProps.handleSubmit} />
+                               </View>
                             </>
                         )}
                     </Formik>

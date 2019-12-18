@@ -6,18 +6,19 @@ const SprSignUpStyle = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     titleWrapper: {
-        marginLeft: 20,
+        marginLeft: 10,
         flexDirection: 'row',
         marginTop: 50
     },
 
     ColoredText: {
-        fontSize: 30,
+        fontSize: 25,
+        textTransform: 'capitalize',
         color: '#2c3e50',
         fontWeight: 'bold',
         fontFamily: "'Roboto', sans-serif",
         textAlign: 'left',
-        marginBottom: 40
+        lineHeight: 60
     },
     orLoginUsing: {
         marginTop: 30,

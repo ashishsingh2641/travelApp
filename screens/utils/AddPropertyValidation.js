@@ -12,6 +12,8 @@ export const validateProperty = yup.object().shape({
         .string()
         .label('pincode')
         .required()
-        .matches(pin, 'Pin number is not valid')
+        .matches(pin, 'Pin number is not valid'),
+    landmark: yup
+        .string().label('Adress second').required(),
 });
 
