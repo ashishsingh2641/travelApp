@@ -5,10 +5,10 @@ const SwitchComponent = (props) => {
     return (
         <View style={{ flex: 1, }}>
             <View style={{ textAlign: "left", display: "flex", flexDirection: 'row', marginTop: 10, marginBottom: 5 }}>
-                <View style={{ width: "50%" }}>
+                <View>
                     <Text>{props.label}</Text>
                 </View>
-                <View style={{ alignItems: "space-around", alignContent: "space-around", width: "50%" }}>
+                <View style={{ textAlign: "right",alignItems: "flex-end", alignContent: "space-around",}}>
                     <Switch  
                     thumbColor="#2c3e50" 
                     trackColor={{

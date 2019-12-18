@@ -50,6 +50,8 @@ target 'travelapp' do
 
   pod 'RNSVG', :path => '../node_modules/react-native-svg'
 
+  pod 'rn-range-slider', :path => '../node_modules/rn-range-slider'
+
   target 'travelappTests' do
     inherit! :search_paths
     # Pods for testing

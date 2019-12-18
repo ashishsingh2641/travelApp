@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\TCTSIT\\Desktop\\app\\travelApp\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh\\values-zh.xml",
+            "outputFile": "/Users/ashishsingh/Desktop/app/untitled folder/travelApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TCTSIT\\.gradle\\caches\\transforms-2\\files-2.1\\41f9053fa843c511e96676f222866f88\\res\\values-zh\\values-zh.xml",
+                    "source": "/Users/ashishsingh/.gradle/caches/transforms-2/files-2.1/412c11890f7ee6c16e92bda862282442/res/values-zh/values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

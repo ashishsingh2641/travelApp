@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, ScrollView, View, Text, Platform, StatusBar, Picker , TouchableOpacity, Alert} from 'react-native';
+import { Image, StyleSheet, ScrollView, View, Text, Platform, StatusBar, Picker , CheckBox, TouchableOpacity, Alert} from 'react-native';
 // import {Spinner} from 'native-base';
 import CardComponent from '../components/CardComponent';
 import SearchBox from '../components/SearchBox';
@@ -118,18 +118,19 @@ class Explore extends Component {
                             <>
                                 {this.state.currentCitiesData.map((item) => {
                                     //const imageURL = JSON.parse(item.imageUrl);
-                                    const arr = []; 
-                                    let imgData = ''
-                                    const data = JSON.parse(item.imageUrl).map((newItem) => {
-                                    imgData = `data:${newItem.mime};base64,${newItem.data}`;
-                                    arr.push(imgData)
-                                    })
+                                    console.log(this.state.currentCitiesData);
                                     return (
                                         <View key={item.id} style={{ marginLeft: 20, marginRight: 20, marginBottom: 15, marginTop: 15 }}>
                                             <Text style={{ fontSize: 20, fontWeight: "bold", textTransform: "uppercase" }}>{item.address1}</Text>
                                             <View style={{flex: 1, flexDirection: 'row', marginBottom: 10, marginTop: 10,}}>
                                                 <View style={{flex: 1}}>
                                                     <Text>{item.address2}</Text>
+                                                    <Text>
+                                                         <CheckBox value={item.sell} disbled={true} />
+                                                    </Text>
+                                                    <Text>
+                                                        {'€' +item.price}
+                                                    </Text>
                                                 </View>
                                                 <View style={{flex: 1}}>
                                                 <TouchableOpacity style={{textAlign: 'right'}}
@@ -147,13 +148,13 @@ class Explore extends Component {
                                             <View style={{display: 'flex', flexDirection: 'row'}}>
                      
                                                
-                                                    {JSON.parse(item.imageUrl).length === 1 ? 
+                                                    {JSON.parse(item.imageUrl) !== undefined && JSON.parse(item.imageUrl).length === 1 ? 
                                                              <Image source={{uri: `data:${JSON.parse(item.imageUrl)[0].mime};base64,${JSON.parse(item.imageUrl)[0].data}`}} 
                                                                  style={{width: "100%", height: 200, resizeMode:'cover', zIndex: 9999}}  />
                                                          : 
                                                         (
                                                         <>
-                                                        {JSON.parse(item.imageUrl).length === 2 ? 
+                                                        {JSON.parse(item.imageUrl) !== undefined && JSON.parse(item.imageUrl).length === 2 ? 
                                                         <>
                                                             <Image source={{uri: `data:${JSON.parse(item.imageUrl)[0].mime};base64,${JSON.parse(item.imageUrl)[0].data}`}} 
                                                             style={{width: "50%", height: 200, marginRight: 5}}/>

@@ -30,6 +30,8 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import com.horcrux.svg.SvgPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+// rn-range-slider
+import com.ashideas.rnrangeslider.RangeSliderPackage;
 
 public class PackageList {
   private Application application;
@@ -82,7 +84,8 @@ public class PackageList {
       new ReanimatedPackage(),
       new RNScreensPackage(),
       new SvgPackage(),
-      new VectorIconsPackage()
+      new VectorIconsPackage(),
+      new RangeSliderPackage()
     ));
   }
 }
