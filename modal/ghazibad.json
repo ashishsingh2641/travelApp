@@ -1,0 +1,404 @@
+[ 
+    { 
+       "locality":"--please select--"
+    },
+    { 
+       "locality":"Aashiana"
+    },
+    { 
+       "locality":"Adarsh Nagar"
+    },
+    { 
+       "locality":"Ahmamau"
+    },
+    { 
+       "locality":"Aishbagh"
+    },
+    { 
+       "locality":"Alambagh"
+    },
+    { 
+       "locality":"Alamnagar"
+    },
+    { 
+       "locality":"Aliganj"
+    },
+    { 
+       "locality":"Amar Shaheed Path"
+    },
+    { 
+       "locality":"Amausi"
+    },
+    { 
+       "locality":"Amber Ganj"
+    },
+    { 
+       "locality":"Anand Nagar"
+    },
+    { 
+       "locality":"AP Sen Marg"
+    },
+    { 
+       "locality":"Arjunganj"
+    },
+    { 
+       "locality":"Arya Nagar"
+    },
+    { 
+       "locality":"Ashiyana Colony"
+    },
+    { 
+       "locality":"Ashok Marg"
+    },
+    { 
+       "locality":"Balaganj"
+    },
+    { 
+       "locality":"Banthra"
+    },
+    { 
+       "locality":"Barha"
+    },
+    { 
+       "locality":"Behta Saboli"
+    },
+    { 
+       "locality":"Bhadrukh"
+    },
+    { 
+       "locality":"Bharat Nagar"
+    },
+    { 
+       "locality":"Bijnaur"
+    },
+    { 
+       "locality":"Chand Ganj"
+    },
+    { 
+       "locality":"Charbagh"
+    },
+    { 
+       "locality":"Chaupatiyan"
+    },
+    { 
+       "locality":"Chinhat"
+    },
+    { 
+       "locality":"Civil Lines"
+    },
+    { 
+       "locality":"Dalibagh Colony"
+    },
+    { 
+       "locality":"Daliganj"
+    },
+    { 
+       "locality":"Darulshafa"
+    },
+    { 
+       "locality":"Deva Road"
+    },
+    { 
+       "locality":"Dilkusha Garden"
+    },
+    { 
+       "locality":"DLF Garden City"
+    },
+    { 
+       "locality":"Faizabad Road"
+    },
+    { 
+       "locality":"Ganesh Ganj"
+    },
+    { 
+       "locality":"Gari Chunauti"
+    },
+    { 
+       "locality":"Ghaila"
+    },
+    { 
+       "locality":"Ghazipur"
+    },
+    { 
+       "locality":"Goila"
+    },
+    { 
+       "locality":"Gokhale Marg"
+    },
+    { 
+       "locality":"Gomti Nagar"
+    },
+    { 
+       "locality":"Gudamba Thaana Road"
+    },
+    { 
+       "locality":"Guramba"
+    },
+    { 
+       "locality":"HAL"
+    },
+    { 
+       "locality":"Hazratganj"
+    },
+    { 
+       "locality":"Husainabad"
+    },
+    { 
+       "locality":"Hussainganj"
+    },
+    { 
+       "locality":"IIM Road"
+    },
+    { 
+       "locality":"Indira Nagar"
+    },
+    { 
+       "locality":"Jal Vayu Vihar"
+    },
+    { 
+       "locality":"Jankipuram"
+    },
+    { 
+       "locality":"Jankipuram Extension"
+    },
+    { 
+       "locality":"Jopling Road"
+    },
+    { 
+       "locality":"Jugor"
+    },
+    { 
+       "locality":"Kalyanpur"
+    },
+    { 
+       "locality":"Kamalabad Barhauli"
+    },
+    { 
+       "locality":"Kanpur Road"
+    },
+    { 
+       "locality":"Kuroni"
+    },
+    { 
+       "locality":"Kursi Road"
+    },
+    { 
+       "locality":"Lalbagh"
+    },
+    { 
+       "locality":"Lucknow Cantonment"
+    },
+    { 
+       "locality":"Madion"
+    },
+    { 
+       "locality":"Mahanagar"
+    },
+    { 
+       "locality":"Mahipatmau"
+    },
+    { 
+       "locality":"Malesemau"
+    },
+    { 
+       "locality":"Manak Nagar"
+    },
+    { 
+       "locality":"Manas Nagar"
+    },
+    { 
+       "locality":"Maunda"
+    },
+    { 
+       "locality":"Miranpur Pinvat"
+    },
+    { 
+       "locality":"Mohan Meking Road"
+    },
+    { 
+       "locality":"Narayan Nagar"
+    },
+    { 
+       "locality":"Natkur"
+    },
+    { 
+       "locality":"Naubasta"
+    },
+    { 
+       "locality":"Naveen Galla Mandi"
+    },
+    { 
+       "locality":"Navi Kot Nandana"
+    },
+    { 
+       "locality":"New Ganeshganj"
+    },
+    { 
+       "locality":"New Hyderabad"
+    },
+    { 
+       "locality":"Nijampur Malhor"
+    },
+    { 
+       "locality":"Nilmatha"
+    },
+    { 
+       "locality":"Nirala Nagar"
+    },
+    { 
+       "locality":"Nirala Nagar"
+    },
+    { 
+       "locality":"Nishatganj"
+    },
+    { 
+       "locality":"Paikaramau"
+    },
+    { 
+       "locality":"Pan Dariba Marg"
+    },
+    { 
+       "locality":"Park Road"
+    },
+    { 
+       "locality":"Pawanpuri"
+    },
+    { 
+       "locality":"Piparsand"
+    },
+    { 
+       "locality":"Prag Narain Road"
+    },
+    { 
+       "locality":"Rae Bareli Road"
+    },
+    { 
+       "locality":"Rahim Nagar"
+    },
+    { 
+       "locality":"Rajajipuram"
+    },
+    { 
+       "locality":"Rajendra Nagar"
+    },
+    { 
+       "locality":"Ram Mohan Rai Marg"
+    },
+    { 
+       "locality":"Rasoolpur Sadat"
+    },
+    { 
+       "locality":"Ruchi Khand-II"
+    },
+    { 
+       "locality":"Saadatganj"
+    },
+    { 
+       "locality":"Sadrauna"
+    },
+    { 
+       "locality":"Sapru Marg"
+    },
+    { 
+       "locality":"Sarai Mali Khan"
+    },
+    { 
+       "locality":"Sarojini Nagar"
+    },
+    { 
+       "locality":"Sarosa Bharosa"
+    },
+    { 
+       "locality":"Sarvodaya Nagar"
+    },
+    { 
+       "locality":"Sector-14"
+    },
+    { 
+       "locality":"Sector-18"
+    },
+    { 
+       "locality":"Sector-B"
+    },
+    { 
+       "locality":"Sector-D"
+    },
+    { 
+       "locality":"Shahnajaf Road"
+    },
+    { 
+       "locality":"Sharda Nagar"
+    },
+    { 
+       "locality":"Shyam Vihar Colony"
+    },
+    { 
+       "locality":"Sikrauri"
+    },
+    { 
+       "locality":"Singar Nagar"
+    },
+    { 
+       "locality":"Subhash Marg"
+    },
+    { 
+       "locality":"Sujanpura"
+    },
+    { 
+       "locality":"Sunder Bagh"
+    },
+    { 
+       "locality":"Sushant Golf City"
+    },
+    { 
+       "locality":"Telibagh"
+    },
+    { 
+       "locality":"Thakurganj"
+    },
+    { 
+       "locality":"The Mall Avenue"
+    },
+    { 
+       "locality":"Tilak Marg"
+    },
+    { 
+       "locality":"Triveni Nagar"
+    },
+    { 
+       "locality":"Uattardhona"
+    },
+    { 
+       "locality":"Utrathia"
+    },
+    { 
+       "locality":"vasant kunj"
+    },
+    { 
+       "locality":"Vibhuti Khand"
+    },
+    { 
+       "locality":"Vikas Nagar"
+    },
+    { 
+       "locality":"Vineet Khand"
+    },
+    { 
+       "locality":"VIP Road"
+    },
+    { 
+       "locality":"Vishesh Khand"
+    },
+    { 
+       "locality":"Vivekanand puri"
+    },
+    { 
+       "locality":"Vrindavan Yojana"
+    },
+    { 
+       "locality":"Wazirganj"
+    },
+    { 
+       "locality":"Yahiaganj"
+    }
+ ]
